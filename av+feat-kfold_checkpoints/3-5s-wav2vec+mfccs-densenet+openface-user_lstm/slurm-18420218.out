@@ -1,0 +1,3196 @@
+\n-------------------------------------------------------------------------------------
+Execute command: python dtrain.py     --data_rootpath=/public/home/hpc244712231/20250428/MPDD-Young     --audio_deep_method=wav2vec     --audio_predesigned_method=mfccs     --visual_deep_method=densenet     --visual_predesigned_method=openface     --splitwindow_time=5s     --labelcount=3     --track_option=Track2     --feature_max_len=45     --batch_size=1     --num_epochs=500     --device=cuda     --max_components=15     --concentration_prior=0.01     --lr=0.0004 --use_user_features --user_feature_method=lstm
+-------------------------------------------------------------------------------------\n
+完整标记数据集大小: 264
+样本视觉深度特征维度: torch.Size([15, 1000])
+样本视觉预设计特征维度: torch.Size([15, 709])
+样本音频深度特征维度: torch.Size([15, 512])
+样本音频预设计特征维度: torch.Size([15, 64])
+正在准备用户级特征...
+跳过个性化聚类，使用纯多模态模式
+
+====== 开始训练 ======
+Epoch 1 Training - Loss: 2.0338, Accuracy: 0.2938, F1_w: 0.3218, F1_m: 0.2673
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(2): 34, np.int64(1): 18, np.int64(0): 1})
+Epoch 1 Validation - Acc: 0.2264, F1_w: 0.1549, F1_m: 0.2057
+Confusion Matrix:
+ [[ 0 11 16]
+ [ 1  6 12]
+ [ 0  1  6]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.1549.pth, 指标: 0.1549
+当前epoch 1 < 最小训练周期 300，继续训练...
+Epoch 2 Training - Loss: 2.0971, Accuracy: 0.2938, F1_w: 0.2982, F1_m: 0.2849
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(1): 27, np.int64(0): 21, np.int64(2): 5})
+Epoch 2 Validation - Acc: 0.3019, F1_w: 0.3009, F1_m: 0.2681
+Confusion Matrix:
+ [[ 8 16  3]
+ [11  7  1]
+ [ 2  4  1]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.3009.pth, 指标: 0.3009
+当前epoch 2 < 最小训练周期 300，继续训练...
+Epoch 3 Training - Loss: 1.7174, Accuracy: 0.4171, F1_w: 0.4283, F1_m: 0.3823
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 42, np.int64(1): 11})
+Epoch 3 Validation - Acc: 0.4340, F1_w: 0.3670, F1_m: 0.2599
+Confusion Matrix:
+ [[20  7  0]
+ [16  3  0]
+ [ 6  1  0]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.3670.pth, 指标: 0.3670
+当前epoch 3 < 最小训练周期 300，继续训练...
+Epoch 4 Training - Loss: 1.8226, Accuracy: 0.3744, F1_w: 0.3927, F1_m: 0.3373
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 44, np.int64(1): 9})
+Epoch 4 Validation - Acc: 0.4340, F1_w: 0.3526, F1_m: 0.2448
+Confusion Matrix:
+ [[21  6  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 4 < 最小训练周期 300，继续训练...
+Epoch 5 Training - Loss: 1.5034, Accuracy: 0.4171, F1_w: 0.4280, F1_m: 0.3921
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 43, np.int64(1): 10})
+Epoch 5 Validation - Acc: 0.4528, F1_w: 0.3798, F1_m: 0.2690
+Confusion Matrix:
+ [[21  6  0]
+ [16  3  0]
+ [ 6  1  0]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.3798.pth, 指标: 0.3798
+当前epoch 5 < 最小训练周期 300，继续训练...
+Epoch 6 Training - Loss: 1.8959, Accuracy: 0.2701, F1_w: 0.2812, F1_m: 0.2426
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 45, np.int64(1): 8})
+Epoch 6 Validation - Acc: 0.4528, F1_w: 0.3644, F1_m: 0.2531
+Confusion Matrix:
+ [[22  5  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 6 < 最小训练周期 300，继续训练...
+Epoch 7 Training - Loss: 1.8376, Accuracy: 0.3223, F1_w: 0.3342, F1_m: 0.2681
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 48, np.int64(1): 5})
+Epoch 7 Validation - Acc: 0.4906, F1_w: 0.3858, F1_m: 0.2689
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 7  0  0]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.3858.pth, 指标: 0.3858
+当前epoch 7 < 最小训练周期 300，继续训练...
+Epoch 8 Training - Loss: 1.7249, Accuracy: 0.3886, F1_w: 0.3935, F1_m: 0.3319
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 8 Validation - Acc: 0.5094, F1_w: 0.3975, F1_m: 0.2773
+Confusion Matrix:
+ [[25  2  0]
+ [17  2  0]
+ [ 7  0  0]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.3975.pth, 指标: 0.3975
+当前epoch 8 < 最小训练周期 300，继续训练...
+Epoch 9 Training - Loss: 1.5704, Accuracy: 0.4313, F1_w: 0.4369, F1_m: 0.3475
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 9 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 9 < 最小训练周期 300，继续训练...
+Epoch 10 Training - Loss: 1.7790, Accuracy: 0.3223, F1_w: 0.3311, F1_m: 0.2647
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 10 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 10 < 最小训练周期 300，继续训练...
+Epoch 11 Training - Loss: 1.5204, Accuracy: 0.4502, F1_w: 0.4533, F1_m: 0.3738
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 11 Validation - Acc: 0.4717, F1_w: 0.3762, F1_m: 0.2613
+Confusion Matrix:
+ [[23  4  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 11 < 最小训练周期 300，继续训练...
+Epoch 12 Training - Loss: 1.6267, Accuracy: 0.4123, F1_w: 0.4150, F1_m: 0.3561
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 41, np.int64(1): 12})
+Epoch 12 Validation - Acc: 0.4528, F1_w: 0.3922, F1_m: 0.2821
+Confusion Matrix:
+ [[20  7  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 12 < 最小训练周期 300，继续训练...
+Epoch 13 Training - Loss: 1.5310, Accuracy: 0.4123, F1_w: 0.4168, F1_m: 0.3695
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 37, np.int64(1): 16})
+Epoch 13 Validation - Acc: 0.4717, F1_w: 0.4254, F1_m: 0.3122
+Confusion Matrix:
+ [[19  8  0]
+ [13  6  0]
+ [ 5  2  0]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.4254.pth, 指标: 0.4254
+当前epoch 13 < 最小训练周期 300，继续训练...
+Epoch 14 Training - Loss: 1.6036, Accuracy: 0.3934, F1_w: 0.4024, F1_m: 0.3096
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 37, np.int64(1): 16})
+Epoch 14 Validation - Acc: 0.4717, F1_w: 0.4254, F1_m: 0.3122
+Confusion Matrix:
+ [[19  8  0]
+ [13  6  0]
+ [ 5  2  0]]
+当前epoch 14 < 最小训练周期 300，继续训练...
+Epoch 15 Training - Loss: 1.4975, Accuracy: 0.4218, F1_w: 0.4130, F1_m: 0.3188
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 38, np.int64(1): 15})
+Epoch 15 Validation - Acc: 0.4528, F1_w: 0.4033, F1_m: 0.2929
+Confusion Matrix:
+ [[19  8  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 15 < 最小训练周期 300，继续训练...
+Epoch 16 Training - Loss: 1.4698, Accuracy: 0.4645, F1_w: 0.4604, F1_m: 0.3876
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 41, np.int64(1): 12})
+Epoch 16 Validation - Acc: 0.4717, F1_w: 0.4072, F1_m: 0.2919
+Confusion Matrix:
+ [[21  6  0]
+ [15  4  0]
+ [ 5  2  0]]
+当前epoch 16 < 最小训练周期 300，继续训练...
+Epoch 17 Training - Loss: 1.6442, Accuracy: 0.3744, F1_w: 0.3811, F1_m: 0.3073
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 17 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 17 < 最小训练周期 300，继续训练...
+Epoch 18 Training - Loss: 1.7079, Accuracy: 0.3839, F1_w: 0.3825, F1_m: 0.2896
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 18 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 18 < 最小训练周期 300，继续训练...
+Epoch 19 Training - Loss: 1.5560, Accuracy: 0.4171, F1_w: 0.4147, F1_m: 0.3370
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 19 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 19 < 最小训练周期 300，继续训练...
+Epoch 20 Training - Loss: 1.6216, Accuracy: 0.4028, F1_w: 0.3968, F1_m: 0.3190
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 20 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 20 < 最小训练周期 300，继续训练...
+Epoch 21 Training - Loss: 1.4913, Accuracy: 0.4360, F1_w: 0.4369, F1_m: 0.3341
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 21 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 21 < 最小训练周期 300，继续训练...
+Epoch 22 Training - Loss: 1.5755, Accuracy: 0.3981, F1_w: 0.3919, F1_m: 0.3439
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 22 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 22 < 最小训练周期 300，继续训练...
+Epoch 23 Training - Loss: 1.5162, Accuracy: 0.4265, F1_w: 0.4243, F1_m: 0.3599
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 23 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 23 < 最小训练周期 300，继续训练...
+Epoch 24 Training - Loss: 1.4877, Accuracy: 0.4218, F1_w: 0.4210, F1_m: 0.3541
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 24 Validation - Acc: 0.4717, F1_w: 0.3762, F1_m: 0.2613
+Confusion Matrix:
+ [[23  4  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 24 < 最小训练周期 300，继续训练...
+Epoch 25 Training - Loss: 1.4232, Accuracy: 0.4692, F1_w: 0.4668, F1_m: 0.3880
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 25 Validation - Acc: 0.4717, F1_w: 0.3762, F1_m: 0.2613
+Confusion Matrix:
+ [[23  4  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 25 < 最小训练周期 300，继续训练...
+Epoch 26 Training - Loss: 1.4306, Accuracy: 0.4455, F1_w: 0.4435, F1_m: 0.3609
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 42, np.int64(1): 11})
+Epoch 26 Validation - Acc: 0.4528, F1_w: 0.3818, F1_m: 0.2696
+Confusion Matrix:
+ [[21  6  0]
+ [16  3  0]
+ [ 5  2  0]]
+当前epoch 26 < 最小训练周期 300，继续训练...
+Epoch 27 Training - Loss: 1.3526, Accuracy: 0.4597, F1_w: 0.4516, F1_m: 0.3700
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 38, np.int64(1): 15})
+Epoch 27 Validation - Acc: 0.4528, F1_w: 0.4033, F1_m: 0.2929
+Confusion Matrix:
+ [[19  8  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 27 < 最小训练周期 300，继续训练...
+Epoch 28 Training - Loss: 1.4964, Accuracy: 0.4123, F1_w: 0.4141, F1_m: 0.3457
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 38, np.int64(1): 15})
+Epoch 28 Validation - Acc: 0.4528, F1_w: 0.4033, F1_m: 0.2929
+Confusion Matrix:
+ [[19  8  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 28 < 最小训练周期 300，继续训练...
+Epoch 29 Training - Loss: 1.4824, Accuracy: 0.4028, F1_w: 0.4005, F1_m: 0.3332
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 38, np.int64(1): 15})
+Epoch 29 Validation - Acc: 0.4528, F1_w: 0.4033, F1_m: 0.2929
+Confusion Matrix:
+ [[19  8  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 29 < 最小训练周期 300，继续训练...
+Epoch 30 Training - Loss: 1.4554, Accuracy: 0.4408, F1_w: 0.4330, F1_m: 0.3439
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 38, np.int64(1): 15})
+Epoch 30 Validation - Acc: 0.4528, F1_w: 0.4033, F1_m: 0.2929
+Confusion Matrix:
+ [[19  8  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 30 < 最小训练周期 300，继续训练...
+Epoch 31 Training - Loss: 1.4371, Accuracy: 0.4455, F1_w: 0.4335, F1_m: 0.3324
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 39, np.int64(1): 14})
+Epoch 31 Validation - Acc: 0.4717, F1_w: 0.4174, F1_m: 0.3030
+Confusion Matrix:
+ [[20  7  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 31 < 最小训练周期 300，继续训练...
+Epoch 32 Training - Loss: 1.5610, Accuracy: 0.3839, F1_w: 0.3848, F1_m: 0.2918
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 41, np.int64(1): 12})
+Epoch 32 Validation - Acc: 0.4717, F1_w: 0.4072, F1_m: 0.2919
+Confusion Matrix:
+ [[21  6  0]
+ [15  4  0]
+ [ 5  2  0]]
+当前epoch 32 < 最小训练周期 300，继续训练...
+Epoch 33 Training - Loss: 1.5056, Accuracy: 0.3839, F1_w: 0.3828, F1_m: 0.3102
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 33 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 33 < 最小训练周期 300，继续训练...
+Epoch 34 Training - Loss: 1.5083, Accuracy: 0.3744, F1_w: 0.3726, F1_m: 0.2927
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 34 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 34 < 最小训练周期 300，继续训练...
+Epoch 35 Training - Loss: 1.5043, Accuracy: 0.4313, F1_w: 0.4245, F1_m: 0.3312
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 35 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 35 < 最小训练周期 300，继续训练...
+Epoch 36 Training - Loss: 1.4410, Accuracy: 0.4123, F1_w: 0.4073, F1_m: 0.3348
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 36 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 36 < 最小训练周期 300，继续训练...
+Epoch 37 Training - Loss: 1.5303, Accuracy: 0.4360, F1_w: 0.4276, F1_m: 0.3149
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 37 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 37 < 最小训练周期 300，继续训练...
+Epoch 38 Training - Loss: 1.4065, Accuracy: 0.4076, F1_w: 0.4033, F1_m: 0.3138
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 38 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 38 < 最小训练周期 300，继续训练...
+Epoch 39 Training - Loss: 1.6106, Accuracy: 0.3981, F1_w: 0.3958, F1_m: 0.3011
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 39 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 39 < 最小训练周期 300，继续训练...
+Epoch 40 Training - Loss: 1.4355, Accuracy: 0.4739, F1_w: 0.4696, F1_m: 0.4071
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 40 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 40 < 最小训练周期 300，继续训练...
+Epoch 41 Training - Loss: 1.4492, Accuracy: 0.4076, F1_w: 0.3919, F1_m: 0.2932
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 41 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 41 < 最小训练周期 300，继续训练...
+Epoch 42 Training - Loss: 1.5530, Accuracy: 0.3744, F1_w: 0.3635, F1_m: 0.2652
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 42 Validation - Acc: 0.4717, F1_w: 0.3762, F1_m: 0.2613
+Confusion Matrix:
+ [[23  4  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 42 < 最小训练周期 300，继续训练...
+Epoch 43 Training - Loss: 1.4918, Accuracy: 0.4597, F1_w: 0.4504, F1_m: 0.3659
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 43 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 43 < 最小训练周期 300，继续训练...
+Epoch 44 Training - Loss: 1.4490, Accuracy: 0.4171, F1_w: 0.4083, F1_m: 0.3568
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 44 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 44 < 最小训练周期 300，继续训练...
+Epoch 45 Training - Loss: 1.4724, Accuracy: 0.4265, F1_w: 0.4173, F1_m: 0.3304
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 43, np.int64(1): 10})
+Epoch 45 Validation - Acc: 0.5283, F1_w: 0.4584, F1_m: 0.3340
+Confusion Matrix:
+ [[23  4  0]
+ [14  5  0]
+ [ 6  1  0]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.4584.pth, 指标: 0.4584
+当前epoch 45 < 最小训练周期 300，继续训练...
+Epoch 46 Training - Loss: 1.3432, Accuracy: 0.4455, F1_w: 0.4393, F1_m: 0.3552
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 42, np.int64(1): 11})
+Epoch 46 Validation - Acc: 0.5283, F1_w: 0.4591, F1_m: 0.3333
+Confusion Matrix:
+ [[23  4  0]
+ [14  5  0]
+ [ 5  2  0]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.4591.pth, 指标: 0.4591
+当前epoch 46 < 最小训练周期 300，继续训练...
+Epoch 47 Training - Loss: 1.3996, Accuracy: 0.4597, F1_w: 0.4498, F1_m: 0.3325
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 42, np.int64(1): 11})
+Epoch 47 Validation - Acc: 0.5283, F1_w: 0.4591, F1_m: 0.3333
+Confusion Matrix:
+ [[23  4  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 47 < 最小训练周期 300，继续训练...
+Epoch 48 Training - Loss: 1.3894, Accuracy: 0.4408, F1_w: 0.4394, F1_m: 0.3460
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 42, np.int64(1): 11})
+Epoch 48 Validation - Acc: 0.5283, F1_w: 0.4591, F1_m: 0.3333
+Confusion Matrix:
+ [[23  4  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 48 < 最小训练周期 300，继续训练...
+Epoch 49 Training - Loss: 1.4016, Accuracy: 0.4597, F1_w: 0.4556, F1_m: 0.3511
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 42, np.int64(1): 11})
+Epoch 49 Validation - Acc: 0.5283, F1_w: 0.4591, F1_m: 0.3333
+Confusion Matrix:
+ [[23  4  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 49 < 最小训练周期 300，继续训练...
+Epoch 50 Training - Loss: 1.3365, Accuracy: 0.4360, F1_w: 0.4292, F1_m: 0.3376
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 43, np.int64(1): 10})
+Epoch 50 Validation - Acc: 0.5472, F1_w: 0.4729, F1_m: 0.3435
+Confusion Matrix:
+ [[24  3  0]
+ [14  5  0]
+ [ 5  2  0]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.4729.pth, 指标: 0.4729
+当前epoch 50 < 最小训练周期 300，继续训练...
+Epoch 51 Training - Loss: 1.4519, Accuracy: 0.4171, F1_w: 0.4077, F1_m: 0.3297
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 43, np.int64(1): 10})
+Epoch 51 Validation - Acc: 0.5472, F1_w: 0.4729, F1_m: 0.3435
+Confusion Matrix:
+ [[24  3  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 51 < 最小训练周期 300，继续训练...
+Epoch 52 Training - Loss: 1.3996, Accuracy: 0.4218, F1_w: 0.4160, F1_m: 0.3464
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 43, np.int64(1): 10})
+Epoch 52 Validation - Acc: 0.5472, F1_w: 0.4729, F1_m: 0.3435
+Confusion Matrix:
+ [[24  3  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 52 < 最小训练周期 300，继续训练...
+Epoch 53 Training - Loss: 1.4684, Accuracy: 0.4218, F1_w: 0.4140, F1_m: 0.3222
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 43, np.int64(1): 10})
+Epoch 53 Validation - Acc: 0.5472, F1_w: 0.4729, F1_m: 0.3435
+Confusion Matrix:
+ [[24  3  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 53 < 最小训练周期 300，继续训练...
+Epoch 54 Training - Loss: 1.5298, Accuracy: 0.4313, F1_w: 0.4281, F1_m: 0.3299
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 42, np.int64(1): 11})
+Epoch 54 Validation - Acc: 0.5283, F1_w: 0.4591, F1_m: 0.3333
+Confusion Matrix:
+ [[23  4  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 54 < 最小训练周期 300，继续训练...
+Epoch 55 Training - Loss: 1.3688, Accuracy: 0.4123, F1_w: 0.4059, F1_m: 0.3251
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 39, np.int64(1): 14})
+Epoch 55 Validation - Acc: 0.4717, F1_w: 0.4174, F1_m: 0.3030
+Confusion Matrix:
+ [[20  7  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 55 < 最小训练周期 300，继续训练...
+Epoch 56 Training - Loss: 1.2448, Accuracy: 0.4455, F1_w: 0.4423, F1_m: 0.3628
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 39, np.int64(1): 14})
+Epoch 56 Validation - Acc: 0.4717, F1_w: 0.4174, F1_m: 0.3030
+Confusion Matrix:
+ [[20  7  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 56 < 最小训练周期 300，继续训练...
+Epoch 57 Training - Loss: 1.4196, Accuracy: 0.4408, F1_w: 0.4300, F1_m: 0.3388
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 39, np.int64(1): 14})
+Epoch 57 Validation - Acc: 0.4717, F1_w: 0.4174, F1_m: 0.3030
+Confusion Matrix:
+ [[20  7  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 57 < 最小训练周期 300，继续训练...
+Epoch 58 Training - Loss: 1.4461, Accuracy: 0.4455, F1_w: 0.4340, F1_m: 0.3469
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 39, np.int64(1): 14})
+Epoch 58 Validation - Acc: 0.4717, F1_w: 0.4174, F1_m: 0.3030
+Confusion Matrix:
+ [[20  7  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 58 < 最小训练周期 300，继续训练...
+Epoch 59 Training - Loss: 1.4140, Accuracy: 0.4313, F1_w: 0.4180, F1_m: 0.3283
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 41, np.int64(1): 12})
+Epoch 59 Validation - Acc: 0.5094, F1_w: 0.4453, F1_m: 0.3232
+Confusion Matrix:
+ [[22  5  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 59 < 最小训练周期 300，继续训练...
+Epoch 60 Training - Loss: 1.4137, Accuracy: 0.4408, F1_w: 0.4314, F1_m: 0.3425
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 40, np.int64(1): 13})
+Epoch 60 Validation - Acc: 0.4906, F1_w: 0.4314, F1_m: 0.3131
+Confusion Matrix:
+ [[21  6  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 60 < 最小训练周期 300，继续训练...
+Epoch 61 Training - Loss: 1.6250, Accuracy: 0.3555, F1_w: 0.3515, F1_m: 0.2714
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 39, np.int64(1): 14})
+Epoch 61 Validation - Acc: 0.4717, F1_w: 0.4174, F1_m: 0.3030
+Confusion Matrix:
+ [[20  7  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 61 < 最小训练周期 300，继续训练...
+Epoch 62 Training - Loss: 1.2918, Accuracy: 0.4123, F1_w: 0.4022, F1_m: 0.3132
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 39, np.int64(1): 14})
+Epoch 62 Validation - Acc: 0.4717, F1_w: 0.4174, F1_m: 0.3030
+Confusion Matrix:
+ [[20  7  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 62 < 最小训练周期 300，继续训练...
+Epoch 63 Training - Loss: 1.4992, Accuracy: 0.3602, F1_w: 0.3534, F1_m: 0.2690
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 39, np.int64(1): 14})
+Epoch 63 Validation - Acc: 0.4717, F1_w: 0.4174, F1_m: 0.3030
+Confusion Matrix:
+ [[20  7  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 63 < 最小训练周期 300，继续训练...
+Epoch 64 Training - Loss: 1.3134, Accuracy: 0.4550, F1_w: 0.4452, F1_m: 0.3569
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 39, np.int64(1): 14})
+Epoch 64 Validation - Acc: 0.4717, F1_w: 0.4174, F1_m: 0.3030
+Confusion Matrix:
+ [[20  7  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 64 < 最小训练周期 300，继续训练...
+Epoch 65 Training - Loss: 1.4135, Accuracy: 0.4313, F1_w: 0.4200, F1_m: 0.3512
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 41, np.int64(1): 12})
+Epoch 65 Validation - Acc: 0.5094, F1_w: 0.4453, F1_m: 0.3232
+Confusion Matrix:
+ [[22  5  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 65 < 最小训练周期 300，继续训练...
+Epoch 66 Training - Loss: 1.2917, Accuracy: 0.4739, F1_w: 0.4665, F1_m: 0.3680
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 40, np.int64(1): 13})
+Epoch 66 Validation - Acc: 0.5283, F1_w: 0.4690, F1_m: 0.3439
+Confusion Matrix:
+ [[22  5  0]
+ [13  6  0]
+ [ 5  2  0]]
+当前epoch 66 < 最小训练周期 300，继续训练...
+Epoch 67 Training - Loss: 1.4060, Accuracy: 0.3839, F1_w: 0.3782, F1_m: 0.2941
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 67 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 67 < 最小训练周期 300，继续训练...
+Epoch 68 Training - Loss: 1.3191, Accuracy: 0.4408, F1_w: 0.4267, F1_m: 0.3449
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 68 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 68 < 最小训练周期 300，继续训练...
+Epoch 69 Training - Loss: 1.3466, Accuracy: 0.4502, F1_w: 0.4390, F1_m: 0.3740
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 69 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 69 < 最小训练周期 300，继续训练...
+Epoch 70 Training - Loss: 1.2645, Accuracy: 0.4787, F1_w: 0.4720, F1_m: 0.3949
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 70 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 70 < 最小训练周期 300，继续训练...
+Epoch 71 Training - Loss: 1.2978, Accuracy: 0.4645, F1_w: 0.4554, F1_m: 0.3520
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 71 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 71 < 最小训练周期 300，继续训练...
+Epoch 72 Training - Loss: 1.4003, Accuracy: 0.3886, F1_w: 0.3856, F1_m: 0.3035
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 72 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 72 < 最小训练周期 300，继续训练...
+Epoch 73 Training - Loss: 1.2855, Accuracy: 0.4455, F1_w: 0.4336, F1_m: 0.3330
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 73 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 73 < 最小训练周期 300，继续训练...
+Epoch 74 Training - Loss: 1.1587, Accuracy: 0.5213, F1_w: 0.5025, F1_m: 0.4064
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 74 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 74 < 最小训练周期 300，继续训练...
+Epoch 75 Training - Loss: 1.3817, Accuracy: 0.4313, F1_w: 0.4186, F1_m: 0.3366
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 75 Validation - Acc: 0.4906, F1_w: 0.3878, F1_m: 0.2695
+Confusion Matrix:
+ [[24  3  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 75 < 最小训练周期 300，继续训练...
+Epoch 76 Training - Loss: 1.3814, Accuracy: 0.4882, F1_w: 0.4762, F1_m: 0.3991
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 48, np.int64(1): 5})
+Epoch 76 Validation - Acc: 0.4717, F1_w: 0.3559, F1_m: 0.2411
+Confusion Matrix:
+ [[24  3  0]
+ [18  1  0]
+ [ 6  1  0]]
+当前epoch 76 < 最小训练周期 300，继续训练...
+Epoch 77 Training - Loss: 1.1382, Accuracy: 0.5071, F1_w: 0.4891, F1_m: 0.3770
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 77 Validation - Acc: 0.4906, F1_w: 0.3663, F1_m: 0.2483
+Confusion Matrix:
+ [[25  2  0]
+ [18  1  0]
+ [ 6  1  0]]
+当前epoch 77 < 最小训练周期 300，继续训练...
+Epoch 78 Training - Loss: 1.3709, Accuracy: 0.4408, F1_w: 0.4269, F1_m: 0.3269
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 50, np.int64(1): 3})
+Epoch 78 Validation - Acc: 0.5094, F1_w: 0.3766, F1_m: 0.2554
+Confusion Matrix:
+ [[26  1  0]
+ [18  1  0]
+ [ 6  1  0]]
+当前epoch 78 < 最小训练周期 300，继续训练...
+Epoch 79 Training - Loss: 1.2777, Accuracy: 0.4597, F1_w: 0.4405, F1_m: 0.3381
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 50, np.int64(1): 3})
+Epoch 79 Validation - Acc: 0.5094, F1_w: 0.3766, F1_m: 0.2554
+Confusion Matrix:
+ [[26  1  0]
+ [18  1  0]
+ [ 6  1  0]]
+当前epoch 79 < 最小训练周期 300，继续训练...
+Epoch 80 Training - Loss: 1.4126, Accuracy: 0.3839, F1_w: 0.3806, F1_m: 0.3133
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 48, np.int64(1): 5})
+Epoch 80 Validation - Acc: 0.5472, F1_w: 0.4428, F1_m: 0.3144
+Confusion Matrix:
+ [[26  1  0]
+ [16  3  0]
+ [ 6  1  0]]
+当前epoch 80 < 最小训练周期 300，继续训练...
+Epoch 81 Training - Loss: 1.3786, Accuracy: 0.4550, F1_w: 0.4411, F1_m: 0.3376
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 81 Validation - Acc: 0.5094, F1_w: 0.4177, F1_m: 0.2961
+Confusion Matrix:
+ [[24  3  0]
+ [16  3  0]
+ [ 6  1  0]]
+当前epoch 81 < 最小训练周期 300，继续训练...
+Epoch 82 Training - Loss: 1.3259, Accuracy: 0.3934, F1_w: 0.3783, F1_m: 0.2928
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 82 Validation - Acc: 0.5472, F1_w: 0.4592, F1_m: 0.3309
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 82 < 最小训练周期 300，继续训练...
+Epoch 83 Training - Loss: 1.3912, Accuracy: 0.4408, F1_w: 0.4354, F1_m: 0.3352
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 45, np.int64(1): 8})
+Epoch 83 Validation - Acc: 0.5283, F1_w: 0.4458, F1_m: 0.3210
+Confusion Matrix:
+ [[24  3  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 83 < 最小训练周期 300，继续训练...
+Epoch 84 Training - Loss: 1.1748, Accuracy: 0.4834, F1_w: 0.4664, F1_m: 0.3724
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 45, np.int64(1): 8})
+Epoch 84 Validation - Acc: 0.5283, F1_w: 0.4458, F1_m: 0.3210
+Confusion Matrix:
+ [[24  3  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 84 < 最小训练周期 300，继续训练...
+Epoch 85 Training - Loss: 1.3226, Accuracy: 0.4171, F1_w: 0.4032, F1_m: 0.3180
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 44, np.int64(1): 9})
+Epoch 85 Validation - Acc: 0.5094, F1_w: 0.4325, F1_m: 0.3112
+Confusion Matrix:
+ [[23  4  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 85 < 最小训练周期 300，继续训练...
+Epoch 86 Training - Loss: 1.2565, Accuracy: 0.4502, F1_w: 0.4447, F1_m: 0.3823
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 43, np.int64(1): 10})
+Epoch 86 Validation - Acc: 0.5094, F1_w: 0.4337, F1_m: 0.3110
+Confusion Matrix:
+ [[23  4  0]
+ [15  4  0]
+ [ 5  2  0]]
+当前epoch 86 < 最小训练周期 300，继续训练...
+Epoch 87 Training - Loss: 1.2876, Accuracy: 0.4834, F1_w: 0.4709, F1_m: 0.3713
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 42, np.int64(1): 11})
+Epoch 87 Validation - Acc: 0.5283, F1_w: 0.4591, F1_m: 0.3333
+Confusion Matrix:
+ [[23  4  0]
+ [14  5  0]
+ [ 5  2  0]]
+当前epoch 87 < 最小训练周期 300，继续训练...
+Epoch 88 Training - Loss: 1.2761, Accuracy: 0.4834, F1_w: 0.4700, F1_m: 0.3831
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 43, np.int64(1): 10})
+Epoch 88 Validation - Acc: 0.5283, F1_w: 0.4584, F1_m: 0.3340
+Confusion Matrix:
+ [[23  4  0]
+ [14  5  0]
+ [ 6  1  0]]
+当前epoch 88 < 最小训练周期 300，继续训练...
+Epoch 89 Training - Loss: 1.3099, Accuracy: 0.4076, F1_w: 0.3980, F1_m: 0.3154
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 43, np.int64(1): 10})
+Epoch 89 Validation - Acc: 0.5283, F1_w: 0.4584, F1_m: 0.3340
+Confusion Matrix:
+ [[23  4  0]
+ [14  5  0]
+ [ 6  1  0]]
+当前epoch 89 < 最小训练周期 300，继续训练...
+Epoch 90 Training - Loss: 1.3445, Accuracy: 0.4597, F1_w: 0.4461, F1_m: 0.3505
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 45, np.int64(1): 8})
+Epoch 90 Validation - Acc: 0.5283, F1_w: 0.4458, F1_m: 0.3210
+Confusion Matrix:
+ [[24  3  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 90 < 最小训练周期 300，继续训练...
+Epoch 91 Training - Loss: 1.3800, Accuracy: 0.4550, F1_w: 0.4479, F1_m: 0.3654
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 45, np.int64(1): 8})
+Epoch 91 Validation - Acc: 0.5283, F1_w: 0.4458, F1_m: 0.3210
+Confusion Matrix:
+ [[24  3  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 91 < 最小训练周期 300，继续训练...
+Epoch 92 Training - Loss: 1.3198, Accuracy: 0.5071, F1_w: 0.4980, F1_m: 0.4227
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 45, np.int64(1): 8})
+Epoch 92 Validation - Acc: 0.5283, F1_w: 0.4458, F1_m: 0.3210
+Confusion Matrix:
+ [[24  3  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 92 < 最小训练周期 300，继续训练...
+Epoch 93 Training - Loss: 1.1109, Accuracy: 0.5213, F1_w: 0.5077, F1_m: 0.4356
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 93 Validation - Acc: 0.5283, F1_w: 0.4302, F1_m: 0.3052
+Confusion Matrix:
+ [[25  2  0]
+ [16  3  0]
+ [ 6  1  0]]
+当前epoch 93 < 最小训练周期 300，继续训练...
+Epoch 94 Training - Loss: 1.4105, Accuracy: 0.4171, F1_w: 0.4075, F1_m: 0.3360
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 94 Validation - Acc: 0.5472, F1_w: 0.4592, F1_m: 0.3309
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 94 < 最小训练周期 300，继续训练...
+Epoch 95 Training - Loss: 1.3496, Accuracy: 0.4123, F1_w: 0.4068, F1_m: 0.3389
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 95 Validation - Acc: 0.5283, F1_w: 0.4302, F1_m: 0.3052
+Confusion Matrix:
+ [[25  2  0]
+ [16  3  0]
+ [ 6  1  0]]
+当前epoch 95 < 最小训练周期 300，继续训练...
+Epoch 96 Training - Loss: 1.2940, Accuracy: 0.4455, F1_w: 0.4424, F1_m: 0.3719
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 96 Validation - Acc: 0.4906, F1_w: 0.3663, F1_m: 0.2483
+Confusion Matrix:
+ [[25  2  0]
+ [18  1  0]
+ [ 6  1  0]]
+当前epoch 96 < 最小训练周期 300，继续训练...
+Epoch 97 Training - Loss: 1.2562, Accuracy: 0.4692, F1_w: 0.4579, F1_m: 0.3945
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 97 Validation - Acc: 0.4906, F1_w: 0.3663, F1_m: 0.2483
+Confusion Matrix:
+ [[25  2  0]
+ [18  1  0]
+ [ 6  1  0]]
+当前epoch 97 < 最小训练周期 300，继续训练...
+Epoch 98 Training - Loss: 1.2027, Accuracy: 0.4976, F1_w: 0.4802, F1_m: 0.3973
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 98 Validation - Acc: 0.4906, F1_w: 0.3663, F1_m: 0.2483
+Confusion Matrix:
+ [[25  2  0]
+ [18  1  0]
+ [ 6  1  0]]
+当前epoch 98 < 最小训练周期 300，继续训练...
+Epoch 99 Training - Loss: 1.2503, Accuracy: 0.4550, F1_w: 0.4467, F1_m: 0.3704
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 99 Validation - Acc: 0.4906, F1_w: 0.3663, F1_m: 0.2483
+Confusion Matrix:
+ [[25  2  0]
+ [18  1  0]
+ [ 6  1  0]]
+当前epoch 99 < 最小训练周期 300，继续训练...
+Epoch 100 Training - Loss: 1.3230, Accuracy: 0.4550, F1_w: 0.4451, F1_m: 0.3617
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 100 Validation - Acc: 0.4906, F1_w: 0.3663, F1_m: 0.2483
+Confusion Matrix:
+ [[25  2  0]
+ [18  1  0]
+ [ 6  1  0]]
+当前epoch 100 < 最小训练周期 300，继续训练...
+Epoch 101 Training - Loss: 1.3173, Accuracy: 0.4265, F1_w: 0.4153, F1_m: 0.3400
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 101 Validation - Acc: 0.4906, F1_w: 0.3663, F1_m: 0.2483
+Confusion Matrix:
+ [[25  2  0]
+ [18  1  0]
+ [ 6  1  0]]
+当前epoch 101 < 最小训练周期 300，继续训练...
+Epoch 102 Training - Loss: 1.4112, Accuracy: 0.3981, F1_w: 0.3824, F1_m: 0.3032
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 102 Validation - Acc: 0.4906, F1_w: 0.3663, F1_m: 0.2483
+Confusion Matrix:
+ [[25  2  0]
+ [18  1  0]
+ [ 6  1  0]]
+当前epoch 102 < 最小训练周期 300，继续训练...
+Epoch 103 Training - Loss: 1.3422, Accuracy: 0.4408, F1_w: 0.4353, F1_m: 0.3535
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 103 Validation - Acc: 0.4906, F1_w: 0.3663, F1_m: 0.2483
+Confusion Matrix:
+ [[25  2  0]
+ [18  1  0]
+ [ 6  1  0]]
+当前epoch 103 < 最小训练周期 300，继续训练...
+Epoch 104 Training - Loss: 1.4193, Accuracy: 0.4076, F1_w: 0.3929, F1_m: 0.3014
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 104 Validation - Acc: 0.4906, F1_w: 0.3663, F1_m: 0.2483
+Confusion Matrix:
+ [[25  2  0]
+ [18  1  0]
+ [ 6  1  0]]
+当前epoch 104 < 最小训练周期 300，继续训练...
+Epoch 105 Training - Loss: 1.2634, Accuracy: 0.4313, F1_w: 0.4170, F1_m: 0.3467
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 105 Validation - Acc: 0.4906, F1_w: 0.3663, F1_m: 0.2483
+Confusion Matrix:
+ [[25  2  0]
+ [18  1  0]
+ [ 6  1  0]]
+当前epoch 105 < 最小训练周期 300，继续训练...
+Epoch 106 Training - Loss: 1.2658, Accuracy: 0.4645, F1_w: 0.4555, F1_m: 0.3717
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 106 Validation - Acc: 0.4906, F1_w: 0.3663, F1_m: 0.2483
+Confusion Matrix:
+ [[25  2  0]
+ [18  1  0]
+ [ 6  1  0]]
+当前epoch 106 < 最小训练周期 300，继续训练...
+Epoch 107 Training - Loss: 1.3036, Accuracy: 0.4692, F1_w: 0.4555, F1_m: 0.3618
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 50, np.int64(1): 3})
+Epoch 107 Validation - Acc: 0.4906, F1_w: 0.3634, F1_m: 0.2468
+Confusion Matrix:
+ [[25  2  0]
+ [18  1  0]
+ [ 7  0  0]]
+当前epoch 107 < 最小训练周期 300，继续训练...
+Epoch 108 Training - Loss: 1.2394, Accuracy: 0.4739, F1_w: 0.4530, F1_m: 0.3447
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 50, np.int64(1): 3})
+Epoch 108 Validation - Acc: 0.4906, F1_w: 0.3634, F1_m: 0.2468
+Confusion Matrix:
+ [[25  2  0]
+ [18  1  0]
+ [ 7  0  0]]
+当前epoch 108 < 最小训练周期 300，继续训练...
+Epoch 109 Training - Loss: 1.4441, Accuracy: 0.3791, F1_w: 0.3592, F1_m: 0.2723
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 50, np.int64(1): 3})
+Epoch 109 Validation - Acc: 0.4906, F1_w: 0.3634, F1_m: 0.2468
+Confusion Matrix:
+ [[25  2  0]
+ [18  1  0]
+ [ 7  0  0]]
+当前epoch 109 < 最小训练周期 300，继续训练...
+Epoch 110 Training - Loss: 1.1841, Accuracy: 0.4834, F1_w: 0.4609, F1_m: 0.3407
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 110 Validation - Acc: 0.4906, F1_w: 0.3663, F1_m: 0.2483
+Confusion Matrix:
+ [[25  2  0]
+ [18  1  0]
+ [ 6  1  0]]
+当前epoch 110 < 最小训练周期 300，继续训练...
+Epoch 111 Training - Loss: 1.2880, Accuracy: 0.4502, F1_w: 0.4302, F1_m: 0.3255
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 111 Validation - Acc: 0.4906, F1_w: 0.3663, F1_m: 0.2483
+Confusion Matrix:
+ [[25  2  0]
+ [18  1  0]
+ [ 6  1  0]]
+当前epoch 111 < 最小训练周期 300，继续训练...
+Epoch 112 Training - Loss: 1.3770, Accuracy: 0.4171, F1_w: 0.3948, F1_m: 0.3027
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 112 Validation - Acc: 0.4906, F1_w: 0.3663, F1_m: 0.2483
+Confusion Matrix:
+ [[25  2  0]
+ [18  1  0]
+ [ 6  1  0]]
+当前epoch 112 < 最小训练周期 300，继续训练...
+Epoch 113 Training - Loss: 1.3154, Accuracy: 0.4550, F1_w: 0.4451, F1_m: 0.3419
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 113 Validation - Acc: 0.4906, F1_w: 0.3663, F1_m: 0.2483
+Confusion Matrix:
+ [[25  2  0]
+ [18  1  0]
+ [ 6  1  0]]
+当前epoch 113 < 最小训练周期 300，继续训练...
+Epoch 114 Training - Loss: 1.3829, Accuracy: 0.4502, F1_w: 0.4422, F1_m: 0.3693
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 114 Validation - Acc: 0.4906, F1_w: 0.3663, F1_m: 0.2483
+Confusion Matrix:
+ [[25  2  0]
+ [18  1  0]
+ [ 6  1  0]]
+当前epoch 114 < 最小训练周期 300，继续训练...
+Epoch 115 Training - Loss: 1.4318, Accuracy: 0.4313, F1_w: 0.4231, F1_m: 0.3233
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 50, np.int64(1): 3})
+Epoch 115 Validation - Acc: 0.4906, F1_w: 0.3634, F1_m: 0.2468
+Confusion Matrix:
+ [[25  2  0]
+ [18  1  0]
+ [ 7  0  0]]
+当前epoch 115 < 最小训练周期 300，继续训练...
+Epoch 116 Training - Loss: 1.2574, Accuracy: 0.4265, F1_w: 0.4125, F1_m: 0.3178
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 50, np.int64(1): 3})
+Epoch 116 Validation - Acc: 0.4906, F1_w: 0.3634, F1_m: 0.2468
+Confusion Matrix:
+ [[25  2  0]
+ [18  1  0]
+ [ 7  0  0]]
+当前epoch 116 < 最小训练周期 300，继续训练...
+Epoch 117 Training - Loss: 1.2541, Accuracy: 0.4408, F1_w: 0.4309, F1_m: 0.3495
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 117 Validation - Acc: 0.5094, F1_w: 0.3975, F1_m: 0.2773
+Confusion Matrix:
+ [[25  2  0]
+ [17  2  0]
+ [ 7  0  0]]
+当前epoch 117 < 最小训练周期 300，继续训练...
+Epoch 118 Training - Loss: 1.3319, Accuracy: 0.4597, F1_w: 0.4438, F1_m: 0.3652
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 118 Validation - Acc: 0.5094, F1_w: 0.3975, F1_m: 0.2773
+Confusion Matrix:
+ [[25  2  0]
+ [17  2  0]
+ [ 7  0  0]]
+当前epoch 118 < 最小训练周期 300，继续训练...
+Epoch 119 Training - Loss: 1.2709, Accuracy: 0.4313, F1_w: 0.4190, F1_m: 0.3200
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 119 Validation - Acc: 0.5094, F1_w: 0.3975, F1_m: 0.2773
+Confusion Matrix:
+ [[25  2  0]
+ [17  2  0]
+ [ 7  0  0]]
+当前epoch 119 < 最小训练周期 300，继续训练...
+Epoch 120 Training - Loss: 1.2824, Accuracy: 0.4502, F1_w: 0.4434, F1_m: 0.3538
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 120 Validation - Acc: 0.5094, F1_w: 0.3975, F1_m: 0.2773
+Confusion Matrix:
+ [[25  2  0]
+ [17  2  0]
+ [ 7  0  0]]
+当前epoch 120 < 最小训练周期 300，继续训练...
+Epoch 121 Training - Loss: 1.1965, Accuracy: 0.4455, F1_w: 0.4288, F1_m: 0.3188
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 121 Validation - Acc: 0.5094, F1_w: 0.3975, F1_m: 0.2773
+Confusion Matrix:
+ [[25  2  0]
+ [17  2  0]
+ [ 7  0  0]]
+当前epoch 121 < 最小训练周期 300，继续训练...
+Epoch 122 Training - Loss: 1.2653, Accuracy: 0.4455, F1_w: 0.4342, F1_m: 0.3438
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 122 Validation - Acc: 0.5094, F1_w: 0.3975, F1_m: 0.2773
+Confusion Matrix:
+ [[25  2  0]
+ [17  2  0]
+ [ 7  0  0]]
+当前epoch 122 < 最小训练周期 300，继续训练...
+Epoch 123 Training - Loss: 1.2295, Accuracy: 0.4455, F1_w: 0.4301, F1_m: 0.3304
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 48, np.int64(1): 5})
+Epoch 123 Validation - Acc: 0.5094, F1_w: 0.3994, F1_m: 0.2778
+Confusion Matrix:
+ [[25  2  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 123 < 最小训练周期 300，继续训练...
+Epoch 124 Training - Loss: 1.2681, Accuracy: 0.4408, F1_w: 0.4311, F1_m: 0.3479
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 48, np.int64(1): 5})
+Epoch 124 Validation - Acc: 0.5094, F1_w: 0.3994, F1_m: 0.2778
+Confusion Matrix:
+ [[25  2  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 124 < 最小训练周期 300，继续训练...
+Epoch 125 Training - Loss: 1.3082, Accuracy: 0.3886, F1_w: 0.3794, F1_m: 0.3053
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 48, np.int64(1): 5})
+Epoch 125 Validation - Acc: 0.5094, F1_w: 0.3994, F1_m: 0.2778
+Confusion Matrix:
+ [[25  2  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 125 < 最小训练周期 300，继续训练...
+Epoch 126 Training - Loss: 1.2244, Accuracy: 0.4882, F1_w: 0.4810, F1_m: 0.3779
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 48, np.int64(1): 5})
+Epoch 126 Validation - Acc: 0.5094, F1_w: 0.3994, F1_m: 0.2778
+Confusion Matrix:
+ [[25  2  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 126 < 最小训练周期 300，继续训练...
+Epoch 127 Training - Loss: 1.3919, Accuracy: 0.4076, F1_w: 0.4006, F1_m: 0.3426
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 48, np.int64(1): 5})
+Epoch 127 Validation - Acc: 0.5094, F1_w: 0.3994, F1_m: 0.2778
+Confusion Matrix:
+ [[25  2  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 127 < 最小训练周期 300，继续训练...
+Epoch 128 Training - Loss: 1.1269, Accuracy: 0.4692, F1_w: 0.4629, F1_m: 0.3875
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 48, np.int64(1): 5})
+Epoch 128 Validation - Acc: 0.5094, F1_w: 0.3994, F1_m: 0.2778
+Confusion Matrix:
+ [[25  2  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 128 < 最小训练周期 300，继续训练...
+Epoch 129 Training - Loss: 1.2969, Accuracy: 0.4360, F1_w: 0.4224, F1_m: 0.3120
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 48, np.int64(1): 5})
+Epoch 129 Validation - Acc: 0.5094, F1_w: 0.3994, F1_m: 0.2778
+Confusion Matrix:
+ [[25  2  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 129 < 最小训练周期 300，继续训练...
+Epoch 130 Training - Loss: 1.3155, Accuracy: 0.3886, F1_w: 0.3612, F1_m: 0.2770
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 48, np.int64(1): 5})
+Epoch 130 Validation - Acc: 0.5094, F1_w: 0.3994, F1_m: 0.2778
+Confusion Matrix:
+ [[25  2  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 130 < 最小训练周期 300，继续训练...
+Epoch 131 Training - Loss: 1.3066, Accuracy: 0.4171, F1_w: 0.4105, F1_m: 0.3334
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 48, np.int64(1): 5})
+Epoch 131 Validation - Acc: 0.5094, F1_w: 0.3994, F1_m: 0.2778
+Confusion Matrix:
+ [[25  2  0]
+ [17  2  0]
+ [ 6  1  0]]
+当前epoch 131 < 最小训练周期 300，继续训练...
+Epoch 132 Training - Loss: 1.1829, Accuracy: 0.5355, F1_w: 0.5176, F1_m: 0.4106
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 132 Validation - Acc: 0.5283, F1_w: 0.4302, F1_m: 0.3052
+Confusion Matrix:
+ [[25  2  0]
+ [16  3  0]
+ [ 6  1  0]]
+当前epoch 132 < 最小训练周期 300，继续训练...
+Epoch 133 Training - Loss: 1.2158, Accuracy: 0.4360, F1_w: 0.4202, F1_m: 0.3363
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 133 Validation - Acc: 0.5472, F1_w: 0.4592, F1_m: 0.3309
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 133 < 最小训练周期 300，继续训练...
+Epoch 134 Training - Loss: 1.2641, Accuracy: 0.4645, F1_w: 0.4468, F1_m: 0.3566
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 134 Validation - Acc: 0.5472, F1_w: 0.4592, F1_m: 0.3309
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 134 < 最小训练周期 300，继续训练...
+Epoch 135 Training - Loss: 1.1839, Accuracy: 0.5071, F1_w: 0.4963, F1_m: 0.4155
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 135 Validation - Acc: 0.5472, F1_w: 0.4592, F1_m: 0.3309
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 135 < 最小训练周期 300，继续训练...
+Epoch 136 Training - Loss: 1.2226, Accuracy: 0.4550, F1_w: 0.4464, F1_m: 0.3777
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 136 Validation - Acc: 0.5472, F1_w: 0.4592, F1_m: 0.3309
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 136 < 最小训练周期 300，继续训练...
+Epoch 137 Training - Loss: 1.2677, Accuracy: 0.4645, F1_w: 0.4524, F1_m: 0.3697
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 45, np.int64(1): 8})
+Epoch 137 Validation - Acc: 0.5660, F1_w: 0.4865, F1_m: 0.3549
+Confusion Matrix:
+ [[25  2  0]
+ [14  5  0]
+ [ 6  1  0]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.4865.pth, 指标: 0.4865
+当前epoch 137 < 最小训练周期 300，继续训练...
+Epoch 138 Training - Loss: 1.2996, Accuracy: 0.3981, F1_w: 0.3948, F1_m: 0.3052
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 45, np.int64(1): 8})
+Epoch 138 Validation - Acc: 0.5660, F1_w: 0.4865, F1_m: 0.3549
+Confusion Matrix:
+ [[25  2  0]
+ [14  5  0]
+ [ 6  1  0]]
+当前epoch 138 < 最小训练周期 300，继续训练...
+Epoch 139 Training - Loss: 1.1931, Accuracy: 0.4976, F1_w: 0.4830, F1_m: 0.3824
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 45, np.int64(1): 8})
+Epoch 139 Validation - Acc: 0.5660, F1_w: 0.4865, F1_m: 0.3549
+Confusion Matrix:
+ [[25  2  0]
+ [14  5  0]
+ [ 6  1  0]]
+当前epoch 139 < 最小训练周期 300，继续训练...
+Epoch 140 Training - Loss: 1.2980, Accuracy: 0.4360, F1_w: 0.4214, F1_m: 0.3294
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 45, np.int64(1): 8})
+Epoch 140 Validation - Acc: 0.5660, F1_w: 0.4865, F1_m: 0.3549
+Confusion Matrix:
+ [[25  2  0]
+ [14  5  0]
+ [ 6  1  0]]
+当前epoch 140 < 最小训练周期 300，继续训练...
+Epoch 141 Training - Loss: 1.2831, Accuracy: 0.4408, F1_w: 0.4258, F1_m: 0.3435
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 45, np.int64(1): 8})
+Epoch 141 Validation - Acc: 0.5660, F1_w: 0.4865, F1_m: 0.3549
+Confusion Matrix:
+ [[25  2  0]
+ [14  5  0]
+ [ 6  1  0]]
+当前epoch 141 < 最小训练周期 300，继续训练...
+Epoch 142 Training - Loss: 1.2894, Accuracy: 0.4028, F1_w: 0.3938, F1_m: 0.3176
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 45, np.int64(1): 8})
+Epoch 142 Validation - Acc: 0.5660, F1_w: 0.4865, F1_m: 0.3549
+Confusion Matrix:
+ [[25  2  0]
+ [14  5  0]
+ [ 6  1  0]]
+当前epoch 142 < 最小训练周期 300，继续训练...
+Epoch 143 Training - Loss: 1.2126, Accuracy: 0.4929, F1_w: 0.4765, F1_m: 0.3658
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 44, np.int64(1): 9})
+Epoch 143 Validation - Acc: 0.5472, F1_w: 0.4724, F1_m: 0.3444
+Confusion Matrix:
+ [[24  3  0]
+ [14  5  0]
+ [ 6  1  0]]
+当前epoch 143 < 最小训练周期 300，继续训练...
+Epoch 144 Training - Loss: 1.1978, Accuracy: 0.4597, F1_w: 0.4454, F1_m: 0.3574
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 144 Validation - Acc: 0.5472, F1_w: 0.4592, F1_m: 0.3309
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 144 < 最小训练周期 300，继续训练...
+Epoch 145 Training - Loss: 1.0594, Accuracy: 0.5450, F1_w: 0.5228, F1_m: 0.4061
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 145 Validation - Acc: 0.5472, F1_w: 0.4592, F1_m: 0.3309
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 145 < 最小训练周期 300，继续训练...
+Epoch 146 Training - Loss: 1.2312, Accuracy: 0.4597, F1_w: 0.4423, F1_m: 0.3290
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 146 Validation - Acc: 0.5472, F1_w: 0.4592, F1_m: 0.3309
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 146 < 最小训练周期 300，继续训练...
+Epoch 147 Training - Loss: 1.1529, Accuracy: 0.4502, F1_w: 0.4360, F1_m: 0.3332
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 147 Validation - Acc: 0.5472, F1_w: 0.4592, F1_m: 0.3309
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 147 < 最小训练周期 300，继续训练...
+Epoch 148 Training - Loss: 1.1619, Accuracy: 0.4834, F1_w: 0.4584, F1_m: 0.3544
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 148 Validation - Acc: 0.5472, F1_w: 0.4592, F1_m: 0.3309
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 148 < 最小训练周期 300，继续训练...
+Epoch 149 Training - Loss: 1.3494, Accuracy: 0.4502, F1_w: 0.4342, F1_m: 0.3329
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 149 Validation - Acc: 0.5472, F1_w: 0.4592, F1_m: 0.3309
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 149 < 最小训练周期 300，继续训练...
+Epoch 150 Training - Loss: 1.3045, Accuracy: 0.4265, F1_w: 0.4090, F1_m: 0.3150
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 150 Validation - Acc: 0.5472, F1_w: 0.4592, F1_m: 0.3309
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 150 < 最小训练周期 300，继续训练...
+Epoch 151 Training - Loss: 1.1901, Accuracy: 0.4929, F1_w: 0.4634, F1_m: 0.3577
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 151 Validation - Acc: 0.5472, F1_w: 0.4592, F1_m: 0.3309
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 151 < 最小训练周期 300，继续训练...
+Epoch 152 Training - Loss: 1.2321, Accuracy: 0.4692, F1_w: 0.4575, F1_m: 0.3663
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 152 Validation - Acc: 0.5472, F1_w: 0.4592, F1_m: 0.3309
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 152 < 最小训练周期 300，继续训练...
+Epoch 153 Training - Loss: 1.1237, Accuracy: 0.4787, F1_w: 0.4673, F1_m: 0.3681
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 153 Validation - Acc: 0.5472, F1_w: 0.4592, F1_m: 0.3309
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 153 < 最小训练周期 300，继续训练...
+Epoch 154 Training - Loss: 1.1131, Accuracy: 0.4929, F1_w: 0.4725, F1_m: 0.3703
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 45, np.int64(1): 8})
+Epoch 154 Validation - Acc: 0.5660, F1_w: 0.4865, F1_m: 0.3549
+Confusion Matrix:
+ [[25  2  0]
+ [14  5  0]
+ [ 6  1  0]]
+当前epoch 154 < 最小训练周期 300，继续训练...
+Epoch 155 Training - Loss: 1.1325, Accuracy: 0.4645, F1_w: 0.4455, F1_m: 0.3570
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 155 Validation - Acc: 0.5472, F1_w: 0.4592, F1_m: 0.3309
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 155 < 最小训练周期 300，继续训练...
+Epoch 156 Training - Loss: 1.2390, Accuracy: 0.5071, F1_w: 0.4860, F1_m: 0.3762
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 156 Validation - Acc: 0.5472, F1_w: 0.4592, F1_m: 0.3309
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 156 < 最小训练周期 300，继续训练...
+Epoch 157 Training - Loss: 1.1798, Accuracy: 0.5213, F1_w: 0.5016, F1_m: 0.3903
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 157 Validation - Acc: 0.5472, F1_w: 0.4592, F1_m: 0.3309
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 6  1  0]]
+当前epoch 157 < 最小训练周期 300，继续训练...
+Epoch 158 Training - Loss: 1.2109, Accuracy: 0.4597, F1_w: 0.4550, F1_m: 0.3946
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 158 Validation - Acc: 0.5472, F1_w: 0.4589, F1_m: 0.3319
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 7  0  0]]
+当前epoch 158 < 最小训练周期 300，继续训练...
+Epoch 159 Training - Loss: 1.1668, Accuracy: 0.4787, F1_w: 0.4520, F1_m: 0.3455
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 159 Validation - Acc: 0.5472, F1_w: 0.4589, F1_m: 0.3319
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 7  0  0]]
+当前epoch 159 < 最小训练周期 300，继续训练...
+Epoch 160 Training - Loss: 1.1640, Accuracy: 0.4692, F1_w: 0.4506, F1_m: 0.3545
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 160 Validation - Acc: 0.5472, F1_w: 0.4589, F1_m: 0.3319
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 7  0  0]]
+当前epoch 160 < 最小训练周期 300，继续训练...
+Epoch 161 Training - Loss: 1.1603, Accuracy: 0.4692, F1_w: 0.4617, F1_m: 0.3642
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 161 Validation - Acc: 0.5094, F1_w: 0.3975, F1_m: 0.2773
+Confusion Matrix:
+ [[25  2  0]
+ [17  2  0]
+ [ 7  0  0]]
+当前epoch 161 < 最小训练周期 300，继续训练...
+Epoch 162 Training - Loss: 1.2583, Accuracy: 0.4455, F1_w: 0.4358, F1_m: 0.3420
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 162 Validation - Acc: 0.5094, F1_w: 0.3975, F1_m: 0.2773
+Confusion Matrix:
+ [[25  2  0]
+ [17  2  0]
+ [ 7  0  0]]
+当前epoch 162 < 最小训练周期 300，继续训练...
+Epoch 163 Training - Loss: 1.3064, Accuracy: 0.4313, F1_w: 0.4152, F1_m: 0.3374
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 50, np.int64(1): 3})
+Epoch 163 Validation - Acc: 0.5283, F1_w: 0.4092, F1_m: 0.2857
+Confusion Matrix:
+ [[26  1  0]
+ [17  2  0]
+ [ 7  0  0]]
+当前epoch 163 < 最小训练周期 300，继续训练...
+Epoch 164 Training - Loss: 1.1836, Accuracy: 0.4787, F1_w: 0.4522, F1_m: 0.3426
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 50, np.int64(1): 3})
+Epoch 164 Validation - Acc: 0.5283, F1_w: 0.4092, F1_m: 0.2857
+Confusion Matrix:
+ [[26  1  0]
+ [17  2  0]
+ [ 7  0  0]]
+当前epoch 164 < 最小训练周期 300，继续训练...
+Epoch 165 Training - Loss: 1.1671, Accuracy: 0.4313, F1_w: 0.4218, F1_m: 0.3476
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 50, np.int64(1): 3})
+Epoch 165 Validation - Acc: 0.5283, F1_w: 0.4092, F1_m: 0.2857
+Confusion Matrix:
+ [[26  1  0]
+ [17  2  0]
+ [ 7  0  0]]
+当前epoch 165 < 最小训练周期 300，继续训练...
+Epoch 166 Training - Loss: 1.0995, Accuracy: 0.4692, F1_w: 0.4550, F1_m: 0.3622
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 166 Validation - Acc: 0.5472, F1_w: 0.4421, F1_m: 0.3150
+Confusion Matrix:
+ [[26  1  0]
+ [16  3  0]
+ [ 7  0  0]]
+当前epoch 166 < 最小训练周期 300，继续训练...
+Epoch 167 Training - Loss: 1.1528, Accuracy: 0.5213, F1_w: 0.5000, F1_m: 0.4159
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 167 Validation - Acc: 0.5472, F1_w: 0.4421, F1_m: 0.3150
+Confusion Matrix:
+ [[26  1  0]
+ [16  3  0]
+ [ 7  0  0]]
+当前epoch 167 < 最小训练周期 300，继续训练...
+Epoch 168 Training - Loss: 1.0993, Accuracy: 0.5071, F1_w: 0.4882, F1_m: 0.4041
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 49, np.int64(1): 4})
+Epoch 168 Validation - Acc: 0.5472, F1_w: 0.4421, F1_m: 0.3150
+Confusion Matrix:
+ [[26  1  0]
+ [16  3  0]
+ [ 7  0  0]]
+当前epoch 168 < 最小训练周期 300，继续训练...
+Epoch 169 Training - Loss: 1.1273, Accuracy: 0.4929, F1_w: 0.4868, F1_m: 0.3748
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 48, np.int64(1): 5})
+Epoch 169 Validation - Acc: 0.5660, F1_w: 0.4727, F1_m: 0.3422
+Confusion Matrix:
+ [[26  1  0]
+ [15  4  0]
+ [ 7  0  0]]
+当前epoch 169 < 最小训练周期 300，继续训练...
+Epoch 170 Training - Loss: 1.1900, Accuracy: 0.4597, F1_w: 0.4371, F1_m: 0.3319
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 48, np.int64(1): 5})
+Epoch 170 Validation - Acc: 0.5660, F1_w: 0.4727, F1_m: 0.3422
+Confusion Matrix:
+ [[26  1  0]
+ [15  4  0]
+ [ 7  0  0]]
+当前epoch 170 < 最小训练周期 300，继续训练...
+Epoch 171 Training - Loss: 1.2460, Accuracy: 0.4313, F1_w: 0.4203, F1_m: 0.3214
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 48, np.int64(1): 5})
+Epoch 171 Validation - Acc: 0.5660, F1_w: 0.4727, F1_m: 0.3422
+Confusion Matrix:
+ [[26  1  0]
+ [15  4  0]
+ [ 7  0  0]]
+当前epoch 171 < 最小训练周期 300，继续训练...
+Epoch 172 Training - Loss: 1.1577, Accuracy: 0.4882, F1_w: 0.4768, F1_m: 0.3812
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 48, np.int64(1): 5})
+Epoch 172 Validation - Acc: 0.5660, F1_w: 0.4727, F1_m: 0.3422
+Confusion Matrix:
+ [[26  1  0]
+ [15  4  0]
+ [ 7  0  0]]
+当前epoch 172 < 最小训练周期 300，继续训练...
+Epoch 173 Training - Loss: 1.0658, Accuracy: 0.5213, F1_w: 0.4977, F1_m: 0.3886
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 173 Validation - Acc: 0.5472, F1_w: 0.4589, F1_m: 0.3319
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 7  0  0]]
+当前epoch 173 < 最小训练周期 300，继续训练...
+Epoch 174 Training - Loss: 1.1047, Accuracy: 0.5024, F1_w: 0.4864, F1_m: 0.3734
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 174 Validation - Acc: 0.5472, F1_w: 0.4589, F1_m: 0.3319
+Confusion Matrix:
+ [[25  2  0]
+ [15  4  0]
+ [ 7  0  0]]
+当前epoch 174 < 最小训练周期 300，继续训练...
+Epoch 175 Training - Loss: 1.1532, Accuracy: 0.4882, F1_w: 0.4756, F1_m: 0.3678
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 45, np.int64(1): 8})
+Epoch 175 Validation - Acc: 0.5660, F1_w: 0.4865, F1_m: 0.3549
+Confusion Matrix:
+ [[25  2  0]
+ [14  5  0]
+ [ 6  1  0]]
+当前epoch 175 < 最小训练周期 300，继续训练...
+Epoch 176 Training - Loss: 1.1980, Accuracy: 0.4645, F1_w: 0.4481, F1_m: 0.3652
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 45, np.int64(1): 8})
+Epoch 176 Validation - Acc: 0.5660, F1_w: 0.4865, F1_m: 0.3549
+Confusion Matrix:
+ [[25  2  0]
+ [14  5  0]
+ [ 6  1  0]]
+当前epoch 176 < 最小训练周期 300，继续训练...
+Epoch 177 Training - Loss: 1.0936, Accuracy: 0.4882, F1_w: 0.4654, F1_m: 0.3677
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 45, np.int64(1): 8})
+Epoch 177 Validation - Acc: 0.5660, F1_w: 0.4865, F1_m: 0.3549
+Confusion Matrix:
+ [[25  2  0]
+ [14  5  0]
+ [ 6  1  0]]
+当前epoch 177 < 最小训练周期 300，继续训练...
+Epoch 178 Training - Loss: 1.1054, Accuracy: 0.5024, F1_w: 0.4883, F1_m: 0.3994
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 45, np.int64(1): 8})
+Epoch 178 Validation - Acc: 0.5660, F1_w: 0.4865, F1_m: 0.3549
+Confusion Matrix:
+ [[25  2  0]
+ [14  5  0]
+ [ 6  1  0]]
+当前epoch 178 < 最小训练周期 300，继续训练...
+Epoch 179 Training - Loss: 1.1039, Accuracy: 0.4739, F1_w: 0.4650, F1_m: 0.3777
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 45, np.int64(1): 8})
+Epoch 179 Validation - Acc: 0.5660, F1_w: 0.4865, F1_m: 0.3549
+Confusion Matrix:
+ [[25  2  0]
+ [14  5  0]
+ [ 6  1  0]]
+当前epoch 179 < 最小训练周期 300，继续训练...
+Epoch 180 Training - Loss: 1.0109, Accuracy: 0.5450, F1_w: 0.5271, F1_m: 0.4331
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 45, np.int64(1): 8})
+Epoch 180 Validation - Acc: 0.5660, F1_w: 0.4865, F1_m: 0.3549
+Confusion Matrix:
+ [[25  2  0]
+ [14  5  0]
+ [ 6  1  0]]
+当前epoch 180 < 最小训练周期 300，继续训练...
+Epoch 181 Training - Loss: 1.1953, Accuracy: 0.4455, F1_w: 0.4415, F1_m: 0.3983
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 43, np.int64(1): 10})
+Epoch 181 Validation - Acc: 0.5660, F1_w: 0.4977, F1_m: 0.3665
+Confusion Matrix:
+ [[24  3  0]
+ [13  6  0]
+ [ 6  1  0]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.4977.pth, 指标: 0.4977
+当前epoch 181 < 最小训练周期 300，继续训练...
+Epoch 182 Training - Loss: 1.0248, Accuracy: 0.5545, F1_w: 0.5483, F1_m: 0.4696
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 40, np.int64(1): 13})
+Epoch 182 Validation - Acc: 0.5660, F1_w: 0.5066, F1_m: 0.3747
+Confusion Matrix:
+ [[23  4  0]
+ [12  7  0]
+ [ 5  2  0]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.5066.pth, 指标: 0.5066
+当前epoch 182 < 最小训练周期 300，继续训练...
+Epoch 183 Training - Loss: 1.0795, Accuracy: 0.5213, F1_w: 0.5086, F1_m: 0.3920
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 38, np.int64(1): 15})
+Epoch 183 Validation - Acc: 0.5283, F1_w: 0.4768, F1_m: 0.3526
+Confusion Matrix:
+ [[21  6  0]
+ [12  7  0]
+ [ 5  2  0]]
+当前epoch 183 < 最小训练周期 300，继续训练...
+Epoch 184 Training - Loss: 1.0772, Accuracy: 0.5213, F1_w: 0.5090, F1_m: 0.4224
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 44, np.int64(1): 9})
+Epoch 184 Validation - Acc: 0.5660, F1_w: 0.4980, F1_m: 0.3682
+Confusion Matrix:
+ [[24  3  0]
+ [13  6  0]
+ [ 7  0  0]]
+当前epoch 184 < 最小训练周期 300，继续训练...
+Epoch 185 Training - Loss: 1.0524, Accuracy: 0.5592, F1_w: 0.5426, F1_m: 0.4488
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 185 Validation - Acc: 0.5660, F1_w: 0.4868, F1_m: 0.3565
+Confusion Matrix:
+ [[25  2  0]
+ [14  5  0]
+ [ 7  0  0]]
+当前epoch 185 < 最小训练周期 300，继续训练...
+Epoch 186 Training - Loss: 1.0989, Accuracy: 0.5118, F1_w: 0.5025, F1_m: 0.4083
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 186 Validation - Acc: 0.5660, F1_w: 0.4868, F1_m: 0.3565
+Confusion Matrix:
+ [[25  2  0]
+ [14  5  0]
+ [ 7  0  0]]
+当前epoch 186 < 最小训练周期 300，继续训练...
+Epoch 187 Training - Loss: 1.1077, Accuracy: 0.5403, F1_w: 0.5245, F1_m: 0.4277
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 187 Validation - Acc: 0.5849, F1_w: 0.5014, F1_m: 0.3676
+Confusion Matrix:
+ [[26  1  0]
+ [14  5  0]
+ [ 7  0  0]]
+当前epoch 187 < 最小训练周期 300，继续训练...
+Epoch 188 Training - Loss: 1.0849, Accuracy: 0.5640, F1_w: 0.5411, F1_m: 0.4364
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 47, np.int64(1): 6})
+Epoch 188 Validation - Acc: 0.5849, F1_w: 0.5014, F1_m: 0.3676
+Confusion Matrix:
+ [[26  1  0]
+ [14  5  0]
+ [ 7  0  0]]
+当前epoch 188 < 最小训练周期 300，继续训练...
+Epoch 189 Training - Loss: 0.9908, Accuracy: 0.5687, F1_w: 0.5535, F1_m: 0.4296
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 41, np.int64(1): 12})
+Epoch 189 Validation - Acc: 0.5472, F1_w: 0.4915, F1_m: 0.3662
+Confusion Matrix:
+ [[22  5  0]
+ [12  7  0]
+ [ 7  0  0]]
+当前epoch 189 < 最小训练周期 300，继续训练...
+Epoch 190 Training - Loss: 1.0480, Accuracy: 0.5403, F1_w: 0.5294, F1_m: 0.4343
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 33, np.int64(1): 20})
+Epoch 190 Validation - Acc: 0.5849, F1_w: 0.5418, F1_m: 0.4103
+Confusion Matrix:
+ [[20  7  0]
+ [ 8 11  0]
+ [ 5  2  0]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.5418.pth, 指标: 0.5418
+当前epoch 190 < 最小训练周期 300，继续训练...
+Epoch 191 Training - Loss: 0.9910, Accuracy: 0.5640, F1_w: 0.5500, F1_m: 0.4488
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 36, np.int64(1): 17})
+Epoch 191 Validation - Acc: 0.5849, F1_w: 0.5388, F1_m: 0.4074
+Confusion Matrix:
+ [[21  6  0]
+ [ 9 10  0]
+ [ 6  1  0]]
+当前epoch 191 < 最小训练周期 300，继续训练...
+Epoch 192 Training - Loss: 1.0145, Accuracy: 0.5355, F1_w: 0.5257, F1_m: 0.3969
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 41, np.int64(1): 12})
+Epoch 192 Validation - Acc: 0.5849, F1_w: 0.5296, F1_m: 0.3975
+Confusion Matrix:
+ [[23  4  0]
+ [11  8  0]
+ [ 7  0  0]]
+当前epoch 192 < 最小训练周期 300，继续训练...
+Epoch 193 Training - Loss: 1.0377, Accuracy: 0.5877, F1_w: 0.5796, F1_m: 0.4922
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 46, np.int64(1): 7})
+Epoch 193 Validation - Acc: 0.5660, F1_w: 0.4868, F1_m: 0.3565
+Confusion Matrix:
+ [[25  2  0]
+ [14  5  0]
+ [ 7  0  0]]
+当前epoch 193 < 最小训练周期 300，继续训练...
+Epoch 194 Training - Loss: 0.9963, Accuracy: 0.5545, F1_w: 0.5353, F1_m: 0.4235
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 39, np.int64(1): 14})
+Epoch 194 Validation - Acc: 0.6038, F1_w: 0.5506, F1_m: 0.4141
+Confusion Matrix:
+ [[23  4  0]
+ [10  9  0]
+ [ 6  1  0]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.5506.pth, 指标: 0.5506
+当前epoch 194 < 最小训练周期 300，继续训练...
+Epoch 195 Training - Loss: 1.0417, Accuracy: 0.6019, F1_w: 0.5944, F1_m: 0.4919
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 31, np.int64(1): 22})
+Epoch 195 Validation - Acc: 0.6415, F1_w: 0.5962, F1_m: 0.4575
+Confusion Matrix:
+ [[20  7  0]
+ [ 5 14  0]
+ [ 6  1  0]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.5962.pth, 指标: 0.5962
+当前epoch 195 < 最小训练周期 300，继续训练...
+Epoch 196 Training - Loss: 0.9610, Accuracy: 0.6114, F1_w: 0.5960, F1_m: 0.4897
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 34, np.int64(1): 19})
+Epoch 196 Validation - Acc: 0.6226, F1_w: 0.5772, F1_m: 0.4400
+Confusion Matrix:
+ [[21  6  0]
+ [ 7 12  0]
+ [ 6  1  0]]
+当前epoch 196 < 最小训练周期 300，继续训练...
+Epoch 197 Training - Loss: 0.8957, Accuracy: 0.6161, F1_w: 0.6088, F1_m: 0.4850
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 43, np.int64(1): 10})
+Epoch 197 Validation - Acc: 0.5849, F1_w: 0.5224, F1_m: 0.3895
+Confusion Matrix:
+ [[24  3  0]
+ [12  7  0]
+ [ 7  0  0]]
+当前epoch 197 < 最小训练周期 300，继续训练...
+Epoch 198 Training - Loss: 0.9423, Accuracy: 0.6209, F1_w: 0.6180, F1_m: 0.5077
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 44, np.int64(1): 9})
+Epoch 198 Validation - Acc: 0.5660, F1_w: 0.4980, F1_m: 0.3682
+Confusion Matrix:
+ [[24  3  0]
+ [13  6  0]
+ [ 7  0  0]]
+当前epoch 198 < 最小训练周期 300，继续训练...
+Epoch 199 Training - Loss: 0.9351, Accuracy: 0.6161, F1_w: 0.6089, F1_m: 0.5039
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 36, np.int64(1): 17})
+Epoch 199 Validation - Acc: 0.5849, F1_w: 0.5388, F1_m: 0.4074
+Confusion Matrix:
+ [[21  6  0]
+ [ 9 10  0]
+ [ 6  1  0]]
+当前epoch 199 < 最小训练周期 300，继续训练...
+Epoch 200 Training - Loss: 0.8929, Accuracy: 0.6351, F1_w: 0.6275, F1_m: 0.4983
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 41, np.int64(1): 12})
+Epoch 200 Validation - Acc: 0.6226, F1_w: 0.5678, F1_m: 0.4288
+Confusion Matrix:
+ [[24  3  0]
+ [10  9  0]
+ [ 7  0  0]]
+当前epoch 200 < 最小训练周期 300，继续训练...
+Epoch 201 Training - Loss: 0.8970, Accuracy: 0.6114, F1_w: 0.6030, F1_m: 0.4701
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 39, np.int64(1): 14})
+Epoch 201 Validation - Acc: 0.6226, F1_w: 0.5723, F1_m: 0.4343
+Confusion Matrix:
+ [[23  4  0]
+ [ 9 10  0]
+ [ 7  0  0]]
+当前epoch 201 < 最小训练周期 300，继续训练...
+Epoch 202 Training - Loss: 0.8415, Accuracy: 0.6730, F1_w: 0.6626, F1_m: 0.5482
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 37, np.int64(1): 16})
+Epoch 202 Validation - Acc: 0.6038, F1_w: 0.5551, F1_m: 0.4196
+Confusion Matrix:
+ [[22  5  0]
+ [ 9 10  0]
+ [ 6  1  0]]
+当前epoch 202 < 最小训练周期 300，继续训练...
+Epoch 203 Training - Loss: 0.8616, Accuracy: 0.6635, F1_w: 0.6512, F1_m: 0.5422
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 33, np.int64(1): 20})
+Epoch 203 Validation - Acc: 0.6415, F1_w: 0.5956, F1_m: 0.4556
+Confusion Matrix:
+ [[21  6  0]
+ [ 6 13  0]
+ [ 6  1  0]]
+当前epoch 203 < 最小训练周期 300，继续训练...
+Epoch 204 Training - Loss: 0.8705, Accuracy: 0.6493, F1_w: 0.6517, F1_m: 0.5767
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 39, np.int64(1): 14})
+Epoch 204 Validation - Acc: 0.6226, F1_w: 0.5723, F1_m: 0.4343
+Confusion Matrix:
+ [[23  4  0]
+ [ 9 10  0]
+ [ 7  0  0]]
+当前epoch 204 < 最小训练周期 300，继续训练...
+Epoch 205 Training - Loss: 0.7812, Accuracy: 0.6730, F1_w: 0.6570, F1_m: 0.5371
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 39, np.int64(1): 14})
+Epoch 205 Validation - Acc: 0.6226, F1_w: 0.5723, F1_m: 0.4343
+Confusion Matrix:
+ [[23  4  0]
+ [ 9 10  0]
+ [ 7  0  0]]
+当前epoch 205 < 最小训练周期 300，继续训练...
+Epoch 206 Training - Loss: 0.8371, Accuracy: 0.6303, F1_w: 0.6334, F1_m: 0.5201
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 42, np.int64(1): 11})
+Epoch 206 Validation - Acc: 0.6415, F1_w: 0.5842, F1_m: 0.4415
+Confusion Matrix:
+ [[25  2  0]
+ [10  9  0]
+ [ 7  0  0]]
+当前epoch 206 < 最小训练周期 300，继续训练...
+Epoch 207 Training - Loss: 0.8282, Accuracy: 0.7204, F1_w: 0.7081, F1_m: 0.5722
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 30, np.int64(1): 23})
+Epoch 207 Validation - Acc: 0.6981, F1_w: 0.6485, F1_m: 0.4996
+Confusion Matrix:
+ [[21  6  0]
+ [ 3 16  0]
+ [ 6  1  0]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.6485.pth, 指标: 0.6485
+当前epoch 207 < 最小训练周期 300，继续训练...
+Epoch 208 Training - Loss: 0.8991, Accuracy: 0.6493, F1_w: 0.6333, F1_m: 0.5050
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 35, np.int64(1): 18})
+Epoch 208 Validation - Acc: 0.7358, F1_w: 0.6851, F1_m: 0.5283
+Confusion Matrix:
+ [[24  3  0]
+ [ 4 15  0]
+ [ 7  0  0]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.6851.pth, 指标: 0.6851
+当前epoch 208 < 最小训练周期 300，继续训练...
+Epoch 209 Training - Loss: 0.7927, Accuracy: 0.7204, F1_w: 0.7198, F1_m: 0.6150
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 42, np.int64(1): 11})
+Epoch 209 Validation - Acc: 0.6792, F1_w: 0.6229, F1_m: 0.4734
+Confusion Matrix:
+ [[26  1  0]
+ [ 9 10  0]
+ [ 7  0  0]]
+当前epoch 209 < 最小训练周期 300，继续训练...
+Epoch 210 Training - Loss: 0.8159, Accuracy: 0.6588, F1_w: 0.6399, F1_m: 0.4965
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 39, np.int64(1): 14})
+Epoch 210 Validation - Acc: 0.6981, F1_w: 0.6467, F1_m: 0.4949
+Confusion Matrix:
+ [[25  2  0]
+ [ 7 12  0]
+ [ 7  0  0]]
+当前epoch 210 < 最小训练周期 300，继续训练...
+Epoch 211 Training - Loss: 0.7494, Accuracy: 0.7062, F1_w: 0.6862, F1_m: 0.5355
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 34, np.int64(1): 19})
+Epoch 211 Validation - Acc: 0.7547, F1_w: 0.7028, F1_m: 0.5430
+Confusion Matrix:
+ [[24  3  0]
+ [ 3 16  0]
+ [ 7  0  0]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.7028.pth, 指标: 0.7028
+当前epoch 211 < 最小训练周期 300，继续训练...
+Epoch 212 Training - Loss: 0.6924, Accuracy: 0.7346, F1_w: 0.7302, F1_m: 0.6266
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 38, np.int64(1): 15})
+Epoch 212 Validation - Acc: 0.7170, F1_w: 0.6660, F1_m: 0.5113
+Confusion Matrix:
+ [[25  2  0]
+ [ 6 13  0]
+ [ 7  0  0]]
+当前epoch 212 < 最小训练周期 300，继续训练...
+Epoch 213 Training - Loss: 0.6560, Accuracy: 0.7441, F1_w: 0.7341, F1_m: 0.5964
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 38, np.int64(1): 15})
+Epoch 213 Validation - Acc: 0.7170, F1_w: 0.6660, F1_m: 0.5113
+Confusion Matrix:
+ [[25  2  0]
+ [ 6 13  0]
+ [ 7  0  0]]
+当前epoch 213 < 最小训练周期 300，继续训练...
+Epoch 214 Training - Loss: 0.6786, Accuracy: 0.7109, F1_w: 0.7046, F1_m: 0.5532
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 39, np.int64(1): 14})
+Epoch 214 Validation - Acc: 0.6981, F1_w: 0.6467, F1_m: 0.4949
+Confusion Matrix:
+ [[25  2  0]
+ [ 7 12  0]
+ [ 7  0  0]]
+当前epoch 214 < 最小训练周期 300，继续训练...
+Epoch 215 Training - Loss: 0.7459, Accuracy: 0.7109, F1_w: 0.6997, F1_m: 0.5785
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 37, np.int64(1): 16})
+Epoch 215 Validation - Acc: 0.7358, F1_w: 0.6848, F1_m: 0.5271
+Confusion Matrix:
+ [[25  2  0]
+ [ 5 14  0]
+ [ 7  0  0]]
+当前epoch 215 < 最小训练周期 300，继续训练...
+Epoch 216 Training - Loss: 0.6722, Accuracy: 0.7488, F1_w: 0.7293, F1_m: 0.5947
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 39, np.int64(1): 14})
+Epoch 216 Validation - Acc: 0.6981, F1_w: 0.6467, F1_m: 0.4949
+Confusion Matrix:
+ [[25  2  0]
+ [ 7 12  0]
+ [ 7  0  0]]
+当前epoch 216 < 最小训练周期 300，继续训练...
+Epoch 217 Training - Loss: 0.6209, Accuracy: 0.7773, F1_w: 0.7638, F1_m: 0.6399
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 36, np.int64(1): 17})
+Epoch 217 Validation - Acc: 0.7170, F1_w: 0.6670, F1_m: 0.5132
+Confusion Matrix:
+ [[24  3  0]
+ [ 5 14  0]
+ [ 7  0  0]]
+当前epoch 217 < 最小训练周期 300，继续训练...
+Epoch 218 Training - Loss: 0.6524, Accuracy: 0.7204, F1_w: 0.7178, F1_m: 0.5969
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 39, np.int64(1): 14})
+Epoch 218 Validation - Acc: 0.6981, F1_w: 0.6467, F1_m: 0.4949
+Confusion Matrix:
+ [[25  2  0]
+ [ 7 12  0]
+ [ 7  0  0]]
+当前epoch 218 < 最小训练周期 300，继续训练...
+Epoch 219 Training - Loss: 0.6475, Accuracy: 0.7346, F1_w: 0.7306, F1_m: 0.6090
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 39, np.int64(1): 14})
+Epoch 219 Validation - Acc: 0.6981, F1_w: 0.6467, F1_m: 0.4949
+Confusion Matrix:
+ [[25  2  0]
+ [ 7 12  0]
+ [ 7  0  0]]
+当前epoch 219 < 最小训练周期 300，继续训练...
+Epoch 220 Training - Loss: 0.6179, Accuracy: 0.7583, F1_w: 0.7483, F1_m: 0.6154
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 35, np.int64(1): 18})
+Epoch 220 Validation - Acc: 0.7358, F1_w: 0.6851, F1_m: 0.5283
+Confusion Matrix:
+ [[24  3  0]
+ [ 4 15  0]
+ [ 7  0  0]]
+当前epoch 220 < 最小训练周期 300，继续训练...
+Epoch 221 Training - Loss: 0.6026, Accuracy: 0.7488, F1_w: 0.7479, F1_m: 0.6210
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 35, np.int64(1): 18})
+Epoch 221 Validation - Acc: 0.7358, F1_w: 0.6851, F1_m: 0.5283
+Confusion Matrix:
+ [[24  3  0]
+ [ 4 15  0]
+ [ 7  0  0]]
+当前epoch 221 < 最小训练周期 300，继续训练...
+Epoch 222 Training - Loss: 0.6068, Accuracy: 0.7773, F1_w: 0.7662, F1_m: 0.6414
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 35, np.int64(1): 18})
+Epoch 222 Validation - Acc: 0.7358, F1_w: 0.6851, F1_m: 0.5283
+Confusion Matrix:
+ [[24  3  0]
+ [ 4 15  0]
+ [ 7  0  0]]
+当前epoch 222 < 最小训练周期 300，继续训练...
+Epoch 223 Training - Loss: 0.6942, Accuracy: 0.7204, F1_w: 0.7039, F1_m: 0.5426
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 35, np.int64(1): 18})
+Epoch 223 Validation - Acc: 0.7358, F1_w: 0.6851, F1_m: 0.5283
+Confusion Matrix:
+ [[24  3  0]
+ [ 4 15  0]
+ [ 7  0  0]]
+当前epoch 223 < 最小训练周期 300，继续训练...
+Epoch 224 Training - Loss: 0.6400, Accuracy: 0.7536, F1_w: 0.7476, F1_m: 0.6243
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 33, np.int64(1): 20})
+Epoch 224 Validation - Acc: 0.7736, F1_w: 0.7201, F1_m: 0.5573
+Confusion Matrix:
+ [[24  3  0]
+ [ 2 17  0]
+ [ 7  0  0]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.7201.pth, 指标: 0.7201
+当前epoch 224 < 最小训练周期 300，继续训练...
+Epoch 225 Training - Loss: 0.6411, Accuracy: 0.7441, F1_w: 0.7320, F1_m: 0.5749
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 37, np.int64(1): 16})
+Epoch 225 Validation - Acc: 0.6981, F1_w: 0.6484, F1_m: 0.4976
+Confusion Matrix:
+ [[24  3  0]
+ [ 6 13  0]
+ [ 7  0  0]]
+当前epoch 225 < 最小训练周期 300，继续训练...
+Epoch 226 Training - Loss: 0.5983, Accuracy: 0.7820, F1_w: 0.7731, F1_m: 0.6458
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 33, np.int64(1): 20})
+Epoch 226 Validation - Acc: 0.7547, F1_w: 0.7017, F1_m: 0.5402
+Confusion Matrix:
+ [[24  3  0]
+ [ 3 16  0]
+ [ 6  1  0]]
+当前epoch 226 < 最小训练周期 300，继续训练...
+Epoch 227 Training - Loss: 0.5416, Accuracy: 0.7678, F1_w: 0.7630, F1_m: 0.6369
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 34, np.int64(1): 19})
+Epoch 227 Validation - Acc: 0.7358, F1_w: 0.6839, F1_m: 0.5255
+Confusion Matrix:
+ [[24  3  0]
+ [ 4 15  0]
+ [ 6  1  0]]
+当前epoch 227 < 最小训练周期 300，继续训练...
+Epoch 228 Training - Loss: 0.5375, Accuracy: 0.7867, F1_w: 0.7737, F1_m: 0.6493
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 33, np.int64(1): 20})
+Epoch 228 Validation - Acc: 0.7547, F1_w: 0.7017, F1_m: 0.5402
+Confusion Matrix:
+ [[24  3  0]
+ [ 3 16  0]
+ [ 6  1  0]]
+当前epoch 228 < 最小训练周期 300，继续训练...
+Epoch 229 Training - Loss: 0.6161, Accuracy: 0.7915, F1_w: 0.7757, F1_m: 0.6507
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 34, np.int64(1): 19})
+Epoch 229 Validation - Acc: 0.7358, F1_w: 0.6839, F1_m: 0.5255
+Confusion Matrix:
+ [[24  3  0]
+ [ 4 15  0]
+ [ 6  1  0]]
+当前epoch 229 < 最小训练周期 300，继续训练...
+Epoch 230 Training - Loss: 0.6225, Accuracy: 0.7536, F1_w: 0.7394, F1_m: 0.6015
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 38, np.int64(1): 15})
+Epoch 230 Validation - Acc: 0.7170, F1_w: 0.6660, F1_m: 0.5113
+Confusion Matrix:
+ [[25  2  0]
+ [ 6 13  0]
+ [ 7  0  0]]
+当前epoch 230 < 最小训练周期 300，继续训练...
+Epoch 231 Training - Loss: 0.5298, Accuracy: 0.8341, F1_w: 0.8121, F1_m: 0.6626
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 34, np.int64(1): 19})
+Epoch 231 Validation - Acc: 0.7547, F1_w: 0.7028, F1_m: 0.5430
+Confusion Matrix:
+ [[24  3  0]
+ [ 3 16  0]
+ [ 7  0  0]]
+当前epoch 231 < 最小训练周期 300，继续训练...
+Epoch 232 Training - Loss: 0.6741, Accuracy: 0.7583, F1_w: 0.7477, F1_m: 0.5973
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 36, np.int64(1): 17})
+Epoch 232 Validation - Acc: 0.7547, F1_w: 0.7031, F1_m: 0.5423
+Confusion Matrix:
+ [[25  2  0]
+ [ 4 15  0]
+ [ 7  0  0]]
+当前epoch 232 < 最小训练周期 300，继续训练...
+Epoch 233 Training - Loss: 0.6571, Accuracy: 0.7204, F1_w: 0.7105, F1_m: 0.5688
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 41, np.int64(1): 12})
+Epoch 233 Validation - Acc: 0.7358, F1_w: 0.6821, F1_m: 0.5228
+Confusion Matrix:
+ [[27  0  0]
+ [ 7 12  0]
+ [ 7  0  0]]
+当前epoch 233 < 最小训练周期 300，继续训练...
+Epoch 234 Training - Loss: 0.5680, Accuracy: 0.7630, F1_w: 0.7574, F1_m: 0.6141
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 32, np.int64(1): 21})
+Epoch 234 Validation - Acc: 0.7547, F1_w: 0.7012, F1_m: 0.5379
+Confusion Matrix:
+ [[24  3  0]
+ [ 3 16  0]
+ [ 5  2  0]]
+当前epoch 234 < 最小训练周期 300，继续训练...
+Epoch 235 Training - Loss: 0.5646, Accuracy: 0.7678, F1_w: 0.7601, F1_m: 0.6162
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 34, np.int64(1): 19})
+Epoch 235 Validation - Acc: 0.7547, F1_w: 0.7006, F1_m: 0.5364
+Confusion Matrix:
+ [[25  2  0]
+ [ 4 15  0]
+ [ 5  2  0]]
+当前epoch 235 < 最小训练周期 300，继续训练...
+Epoch 236 Training - Loss: 0.5766, Accuracy: 0.7820, F1_w: 0.7687, F1_m: 0.6232
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 37, np.int64(1): 16})
+Epoch 236 Validation - Acc: 0.7170, F1_w: 0.6643, F1_m: 0.5080
+Confusion Matrix:
+ [[25  2  0]
+ [ 6 13  0]
+ [ 6  1  0]]
+当前epoch 236 < 最小训练周期 300，继续训练...
+Epoch 237 Training - Loss: 0.5134, Accuracy: 0.8246, F1_w: 0.8010, F1_m: 0.6667
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 34, np.int64(1): 19})
+Epoch 237 Validation - Acc: 0.7547, F1_w: 0.7006, F1_m: 0.5364
+Confusion Matrix:
+ [[25  2  0]
+ [ 4 15  0]
+ [ 5  2  0]]
+当前epoch 237 < 最小训练周期 300，继续训练...
+Epoch 238 Training - Loss: 0.5938, Accuracy: 0.7915, F1_w: 0.7718, F1_m: 0.6163
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 33, np.int64(1): 20})
+Epoch 238 Validation - Acc: 0.7736, F1_w: 0.7187, F1_m: 0.5513
+Confusion Matrix:
+ [[25  2  0]
+ [ 3 16  0]
+ [ 5  2  0]]
+当前epoch 238 < 最小训练周期 300，继续训练...
+Epoch 239 Training - Loss: 0.5248, Accuracy: 0.7915, F1_w: 0.7908, F1_m: 0.6738
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 39, np.int64(1): 14})
+Epoch 239 Validation - Acc: 0.6981, F1_w: 0.6467, F1_m: 0.4949
+Confusion Matrix:
+ [[25  2  0]
+ [ 7 12  0]
+ [ 7  0  0]]
+当前epoch 239 < 最小训练周期 300，继续训练...
+Epoch 240 Training - Loss: 0.5354, Accuracy: 0.8057, F1_w: 0.7927, F1_m: 0.6439
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 37, np.int64(1): 16})
+Epoch 240 Validation - Acc: 0.7358, F1_w: 0.6848, F1_m: 0.5271
+Confusion Matrix:
+ [[25  2  0]
+ [ 5 14  0]
+ [ 7  0  0]]
+当前epoch 240 < 最小训练周期 300，继续训练...
+Epoch 241 Training - Loss: 0.5226, Accuracy: 0.8199, F1_w: 0.7958, F1_m: 0.6375
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 33, np.int64(1): 20})
+Epoch 241 Validation - Acc: 0.7925, F1_w: 0.7371, F1_m: 0.5684
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 6  1  0]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.7371.pth, 指标: 0.7371
+当前epoch 241 < 最小训练周期 300，继续训练...
+Epoch 242 Training - Loss: 0.5315, Accuracy: 0.8152, F1_w: 0.8098, F1_m: 0.6733
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 31, np.int64(1): 22})
+Epoch 242 Validation - Acc: 0.7736, F1_w: 0.7189, F1_m: 0.5523
+Confusion Matrix:
+ [[24  3  0]
+ [ 2 17  0]
+ [ 5  2  0]]
+当前epoch 242 < 最小训练周期 300，继续训练...
+Epoch 243 Training - Loss: 0.5370, Accuracy: 0.8246, F1_w: 0.8178, F1_m: 0.7192
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 31, np.int64(1): 22})
+Epoch 243 Validation - Acc: 0.7736, F1_w: 0.7189, F1_m: 0.5523
+Confusion Matrix:
+ [[24  3  0]
+ [ 2 17  0]
+ [ 5  2  0]]
+当前epoch 243 < 最小训练周期 300，继续训练...
+Epoch 244 Training - Loss: 0.5026, Accuracy: 0.8199, F1_w: 0.8072, F1_m: 0.6752
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 41, np.int64(1): 12})
+Epoch 244 Validation - Acc: 0.7170, F1_w: 0.6590, F1_m: 0.5013
+Confusion Matrix:
+ [[27  0  0]
+ [ 8 11  0]
+ [ 6  1  0]]
+当前epoch 244 < 最小训练周期 300，继续训练...
+Epoch 245 Training - Loss: 0.5982, Accuracy: 0.7773, F1_w: 0.7671, F1_m: 0.6239
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 39, np.int64(1): 14})
+Epoch 245 Validation - Acc: 0.7547, F1_w: 0.6993, F1_m: 0.5354
+Confusion Matrix:
+ [[27  0  0]
+ [ 6 13  0]
+ [ 6  1  0]]
+当前epoch 245 < 最小训练周期 300，继续训练...
+Epoch 246 Training - Loss: 0.4764, Accuracy: 0.8009, F1_w: 0.7950, F1_m: 0.6717
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 29, np.int64(1): 24})
+Epoch 246 Validation - Acc: 0.7358, F1_w: 0.6837, F1_m: 0.5255
+Confusion Matrix:
+ [[22  5  0]
+ [ 2 17  0]
+ [ 5  2  0]]
+当前epoch 246 < 最小训练周期 300，继续训练...
+Epoch 247 Training - Loss: 0.5012, Accuracy: 0.7915, F1_w: 0.7734, F1_m: 0.6303
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 37, np.int64(1): 16})
+Epoch 247 Validation - Acc: 0.7736, F1_w: 0.7212, F1_m: 0.5565
+Confusion Matrix:
+ [[26  1  0]
+ [ 4 15  0]
+ [ 7  0  0]]
+当前epoch 247 < 最小训练周期 300，继续训练...
+Epoch 248 Training - Loss: 0.4583, Accuracy: 0.8341, F1_w: 0.8045, F1_m: 0.6460
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 36, np.int64(1): 17})
+Epoch 248 Validation - Acc: 0.7736, F1_w: 0.7192, F1_m: 0.5529
+Confusion Matrix:
+ [[26  1  0]
+ [ 4 15  0]
+ [ 6  1  0]]
+当前epoch 248 < 最小训练周期 300，继续训练...
+Epoch 249 Training - Loss: 0.4716, Accuracy: 0.8389, F1_w: 0.8204, F1_m: 0.6911
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 32, np.int64(1): 21})
+Epoch 249 Validation - Acc: 0.7925, F1_w: 0.7364, F1_m: 0.5658
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 5  2  0]]
+当前epoch 249 < 最小训练周期 300，继续训练...
+Epoch 250 Training - Loss: 0.4713, Accuracy: 0.8246, F1_w: 0.8068, F1_m: 0.6563
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 31, np.int64(1): 22})
+Epoch 250 Validation - Acc: 0.7736, F1_w: 0.7189, F1_m: 0.5523
+Confusion Matrix:
+ [[24  3  0]
+ [ 2 17  0]
+ [ 5  2  0]]
+当前epoch 250 < 最小训练周期 300，继续训练...
+Epoch 251 Training - Loss: 0.4376, Accuracy: 0.8199, F1_w: 0.8065, F1_m: 0.6761
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 34, np.int64(1): 19})
+Epoch 251 Validation - Acc: 0.7925, F1_w: 0.7362, F1_m: 0.5649
+Confusion Matrix:
+ [[26  1  0]
+ [ 3 16  0]
+ [ 5  2  0]]
+当前epoch 251 < 最小训练周期 300，继续训练...
+Epoch 252 Training - Loss: 0.4939, Accuracy: 0.8294, F1_w: 0.8117, F1_m: 0.6724
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 36, np.int64(1): 17})
+Epoch 252 Validation - Acc: 0.7925, F1_w: 0.7354, F1_m: 0.5635
+Confusion Matrix:
+ [[27  0  0]
+ [ 4 15  0]
+ [ 5  2  0]]
+当前epoch 252 < 最小训练周期 300，继续训练...
+Epoch 253 Training - Loss: 0.5072, Accuracy: 0.7867, F1_w: 0.7729, F1_m: 0.6287
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 36, np.int64(1): 17})
+Epoch 253 Validation - Acc: 0.7925, F1_w: 0.7354, F1_m: 0.5635
+Confusion Matrix:
+ [[27  0  0]
+ [ 4 15  0]
+ [ 5  2  0]]
+当前epoch 253 < 最小训练周期 300，继续训练...
+Epoch 254 Training - Loss: 0.4658, Accuracy: 0.8389, F1_w: 0.8209, F1_m: 0.7027
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 36, np.int64(1): 17})
+Epoch 254 Validation - Acc: 0.7925, F1_w: 0.7354, F1_m: 0.5635
+Confusion Matrix:
+ [[27  0  0]
+ [ 4 15  0]
+ [ 5  2  0]]
+当前epoch 254 < 最小训练周期 300，继续训练...
+Epoch 255 Training - Loss: 0.4698, Accuracy: 0.8057, F1_w: 0.7894, F1_m: 0.6430
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 36, np.int64(1): 17})
+Epoch 255 Validation - Acc: 0.7925, F1_w: 0.7354, F1_m: 0.5635
+Confusion Matrix:
+ [[27  0  0]
+ [ 4 15  0]
+ [ 5  2  0]]
+当前epoch 255 < 最小训练周期 300，继续训练...
+Epoch 256 Training - Loss: 0.4714, Accuracy: 0.8199, F1_w: 0.8054, F1_m: 0.6648
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 35, np.int64(1): 18})
+Epoch 256 Validation - Acc: 0.8113, F1_w: 0.7537, F1_m: 0.5786
+Confusion Matrix:
+ [[27  0  0]
+ [ 3 16  0]
+ [ 5  2  0]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.7537.pth, 指标: 0.7537
+当前epoch 256 < 最小训练周期 300，继续训练...
+Epoch 257 Training - Loss: 0.4131, Accuracy: 0.8531, F1_w: 0.8353, F1_m: 0.7138
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 32, np.int64(1): 21})
+Epoch 257 Validation - Acc: 0.7925, F1_w: 0.7364, F1_m: 0.5658
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 5  2  0]]
+当前epoch 257 < 最小训练周期 300，继续训练...
+Epoch 258 Training - Loss: 0.5102, Accuracy: 0.8057, F1_w: 0.7958, F1_m: 0.6542
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 35, np.int64(1): 18})
+Epoch 258 Validation - Acc: 0.8113, F1_w: 0.7537, F1_m: 0.5786
+Confusion Matrix:
+ [[27  0  0]
+ [ 3 16  0]
+ [ 5  2  0]]
+当前epoch 258 < 最小训练周期 300，继续训练...
+Epoch 259 Training - Loss: 0.4361, Accuracy: 0.8341, F1_w: 0.8207, F1_m: 0.6997
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 38, np.int64(1): 15})
+Epoch 259 Validation - Acc: 0.7736, F1_w: 0.7184, F1_m: 0.5514
+Confusion Matrix:
+ [[27  0  0]
+ [ 5 14  0]
+ [ 6  1  0]]
+当前epoch 259 < 最小训练周期 300，继续训练...
+Epoch 260 Training - Loss: 0.5096, Accuracy: 0.8009, F1_w: 0.7826, F1_m: 0.6149
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 32, np.int64(1): 21})
+Epoch 260 Validation - Acc: 0.7736, F1_w: 0.7192, F1_m: 0.5545
+Confusion Matrix:
+ [[24  3  0]
+ [ 2 17  0]
+ [ 6  1  0]]
+当前epoch 260 < 最小训练周期 300，继续训练...
+Epoch 261 Training - Loss: 0.4056, Accuracy: 0.8389, F1_w: 0.8149, F1_m: 0.6769
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 32, np.int64(1): 21})
+Epoch 261 Validation - Acc: 0.7736, F1_w: 0.7192, F1_m: 0.5545
+Confusion Matrix:
+ [[24  3  0]
+ [ 2 17  0]
+ [ 6  1  0]]
+当前epoch 261 < 最小训练周期 300，继续训练...
+Epoch 262 Training - Loss: 0.5086, Accuracy: 0.7867, F1_w: 0.7775, F1_m: 0.6306
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 37, np.int64(1): 16})
+Epoch 262 Validation - Acc: 0.7736, F1_w: 0.7212, F1_m: 0.5565
+Confusion Matrix:
+ [[26  1  0]
+ [ 4 15  0]
+ [ 7  0  0]]
+当前epoch 262 < 最小训练周期 300，继续训练...
+Epoch 263 Training - Loss: 0.4906, Accuracy: 0.8057, F1_w: 0.7929, F1_m: 0.6435
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 38, np.int64(1): 15})
+Epoch 263 Validation - Acc: 0.7925, F1_w: 0.7395, F1_m: 0.5710
+Confusion Matrix:
+ [[27  0  0]
+ [ 4 15  0]
+ [ 7  0  0]]
+当前epoch 263 < 最小训练周期 300，继续训练...
+Epoch 264 Training - Loss: 0.5151, Accuracy: 0.8341, F1_w: 0.8022, F1_m: 0.6313
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 37, np.int64(1): 16})
+Epoch 264 Validation - Acc: 0.7736, F1_w: 0.7212, F1_m: 0.5565
+Confusion Matrix:
+ [[26  1  0]
+ [ 4 15  0]
+ [ 7  0  0]]
+当前epoch 264 < 最小训练周期 300，继续训练...
+Epoch 265 Training - Loss: 0.5098, Accuracy: 0.8294, F1_w: 0.8064, F1_m: 0.6570
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 32, np.int64(1): 21})
+Epoch 265 Validation - Acc: 0.7736, F1_w: 0.7192, F1_m: 0.5545
+Confusion Matrix:
+ [[24  3  0]
+ [ 2 17  0]
+ [ 6  1  0]]
+当前epoch 265 < 最小训练周期 300，继续训练...
+Epoch 266 Training - Loss: 0.4738, Accuracy: 0.8294, F1_w: 0.8068, F1_m: 0.6579
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 31, np.int64(1): 22})
+Epoch 266 Validation - Acc: 0.7736, F1_w: 0.7189, F1_m: 0.5523
+Confusion Matrix:
+ [[24  3  0]
+ [ 2 17  0]
+ [ 5  2  0]]
+当前epoch 266 < 最小训练周期 300，继续训练...
+Epoch 267 Training - Loss: 0.4828, Accuracy: 0.8246, F1_w: 0.8177, F1_m: 0.6903
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 41, np.int64(1): 12})
+Epoch 267 Validation - Acc: 0.7170, F1_w: 0.6590, F1_m: 0.5013
+Confusion Matrix:
+ [[27  0  0]
+ [ 8 11  0]
+ [ 6  1  0]]
+当前epoch 267 < 最小训练周期 300，继续训练...
+Epoch 268 Training - Loss: 0.4721, Accuracy: 0.8199, F1_w: 0.8069, F1_m: 0.6644
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 36, np.int64(1): 17})
+Epoch 268 Validation - Acc: 0.7925, F1_w: 0.7354, F1_m: 0.5635
+Confusion Matrix:
+ [[27  0  0]
+ [ 4 15  0]
+ [ 5  2  0]]
+当前epoch 268 < 最小训练周期 300，继续训练...
+Epoch 269 Training - Loss: 0.3978, Accuracy: 0.8483, F1_w: 0.8225, F1_m: 0.6723
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 31, np.int64(1): 22})
+Epoch 269 Validation - Acc: 0.7736, F1_w: 0.7189, F1_m: 0.5523
+Confusion Matrix:
+ [[24  3  0]
+ [ 2 17  0]
+ [ 5  2  0]]
+当前epoch 269 < 最小训练周期 300，继续训练...
+Epoch 270 Training - Loss: 0.4084, Accuracy: 0.8246, F1_w: 0.8044, F1_m: 0.6550
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 30, np.int64(1): 23})
+Epoch 270 Validation - Acc: 0.7547, F1_w: 0.7013, F1_m: 0.5388
+Confusion Matrix:
+ [[23  4  0]
+ [ 2 17  0]
+ [ 5  2  0]]
+当前epoch 270 < 最小训练周期 300，继续训练...
+Epoch 271 Training - Loss: 0.4160, Accuracy: 0.8436, F1_w: 0.8278, F1_m: 0.6946
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 31, np.int64(1): 22})
+Epoch 271 Validation - Acc: 0.7736, F1_w: 0.7189, F1_m: 0.5523
+Confusion Matrix:
+ [[24  3  0]
+ [ 2 17  0]
+ [ 5  2  0]]
+当前epoch 271 < 最小训练周期 300，继续训练...
+Epoch 272 Training - Loss: 0.4258, Accuracy: 0.8436, F1_w: 0.8273, F1_m: 0.6943
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 33, np.int64(1): 20})
+Epoch 272 Validation - Acc: 0.8113, F1_w: 0.7540, F1_m: 0.5795
+Confusion Matrix:
+ [[26  1  0]
+ [ 2 17  0]
+ [ 5  2  0]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.7540.pth, 指标: 0.7540
+当前epoch 272 < 最小训练周期 300，继续训练...
+Epoch 273 Training - Loss: 0.4167, Accuracy: 0.8531, F1_w: 0.8476, F1_m: 0.7427
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 36, np.int64(1): 17})
+Epoch 273 Validation - Acc: 0.7925, F1_w: 0.7354, F1_m: 0.5635
+Confusion Matrix:
+ [[27  0  0]
+ [ 4 15  0]
+ [ 5  2  0]]
+当前epoch 273 < 最小训练周期 300，继续训练...
+Epoch 274 Training - Loss: 0.4687, Accuracy: 0.8104, F1_w: 0.7877, F1_m: 0.6191
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 35, np.int64(1): 18})
+Epoch 274 Validation - Acc: 0.7736, F1_w: 0.7179, F1_m: 0.5498
+Confusion Matrix:
+ [[26  1  0]
+ [ 4 15  0]
+ [ 5  2  0]]
+当前epoch 274 < 最小训练周期 300，继续训练...
+Epoch 275 Training - Loss: 0.4697, Accuracy: 0.8152, F1_w: 0.8016, F1_m: 0.6504
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 33, np.int64(1): 20})
+Epoch 275 Validation - Acc: 0.8113, F1_w: 0.7540, F1_m: 0.5795
+Confusion Matrix:
+ [[26  1  0]
+ [ 2 17  0]
+ [ 5  2  0]]
+当前epoch 275 < 最小训练周期 300，继续训练...
+Epoch 276 Training - Loss: 0.4350, Accuracy: 0.8673, F1_w: 0.8471, F1_m: 0.7263
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 33, np.int64(1): 20})
+Epoch 276 Validation - Acc: 0.8113, F1_w: 0.7540, F1_m: 0.5795
+Confusion Matrix:
+ [[26  1  0]
+ [ 2 17  0]
+ [ 5  2  0]]
+当前epoch 276 < 最小训练周期 300，继续训练...
+Epoch 277 Training - Loss: 0.4538, Accuracy: 0.8199, F1_w: 0.8045, F1_m: 0.6641
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 33, np.int64(1): 20})
+Epoch 277 Validation - Acc: 0.8113, F1_w: 0.7540, F1_m: 0.5795
+Confusion Matrix:
+ [[26  1  0]
+ [ 2 17  0]
+ [ 5  2  0]]
+当前epoch 277 < 最小训练周期 300，继续训练...
+Epoch 278 Training - Loss: 0.4514, Accuracy: 0.8436, F1_w: 0.8343, F1_m: 0.7159
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 28, np.int64(1): 25})
+Epoch 278 Validation - Acc: 0.7358, F1_w: 0.6846, F1_m: 0.5242
+Confusion Matrix:
+ [[22  5  0]
+ [ 2 17  0]
+ [ 4  3  0]]
+当前epoch 278 < 最小训练周期 300，继续训练...
+Epoch 279 Training - Loss: 0.4756, Accuracy: 0.7915, F1_w: 0.7767, F1_m: 0.6190
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 33, np.int64(1): 20})
+Epoch 279 Validation - Acc: 0.8113, F1_w: 0.7540, F1_m: 0.5795
+Confusion Matrix:
+ [[26  1  0]
+ [ 2 17  0]
+ [ 5  2  0]]
+当前epoch 279 < 最小训练周期 300，继续训练...
+Epoch 280 Training - Loss: 0.4519, Accuracy: 0.8389, F1_w: 0.8140, F1_m: 0.6650
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 35, np.int64(1): 18})
+Epoch 280 Validation - Acc: 0.7736, F1_w: 0.7179, F1_m: 0.5498
+Confusion Matrix:
+ [[26  1  0]
+ [ 4 15  0]
+ [ 5  2  0]]
+当前epoch 280 < 最小训练周期 300，继续训练...
+Epoch 281 Training - Loss: 0.4629, Accuracy: 0.8341, F1_w: 0.8219, F1_m: 0.6978
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 36, np.int64(1): 16, np.int64(2): 1})
+Epoch 281 Validation - Acc: 0.7358, F1_w: 0.6868, F1_m: 0.5228
+Confusion Matrix:
+ [[26  1  0]
+ [ 5 13  1]
+ [ 5  2  0]]
+当前epoch 281 < 最小训练周期 300，继续训练...
+Epoch 282 Training - Loss: 0.3701, Accuracy: 0.8436, F1_w: 0.8276, F1_m: 0.6932
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 35, np.int64(1): 17, np.int64(2): 1})
+Epoch 282 Validation - Acc: 0.7925, F1_w: 0.7590, F1_m: 0.6407
+Confusion Matrix:
+ [[26  1  0]
+ [ 4 15  0]
+ [ 5  1  1]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.7590.pth, 指标: 0.7590
+当前epoch 282 < 最小训练周期 300，继续训练...
+Epoch 283 Training - Loss: 0.4458, Accuracy: 0.8199, F1_w: 0.8085, F1_m: 0.6641
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 32, np.int64(1): 21})
+Epoch 283 Validation - Acc: 0.7925, F1_w: 0.7364, F1_m: 0.5658
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 5  2  0]]
+当前epoch 283 < 最小训练周期 300，继续训练...
+Epoch 284 Training - Loss: 0.4471, Accuracy: 0.8436, F1_w: 0.8295, F1_m: 0.7057
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 34, np.int64(1): 19})
+Epoch 284 Validation - Acc: 0.7925, F1_w: 0.7362, F1_m: 0.5649
+Confusion Matrix:
+ [[26  1  0]
+ [ 3 16  0]
+ [ 5  2  0]]
+当前epoch 284 < 最小训练周期 300，继续训练...
+Epoch 285 Training - Loss: 0.4920, Accuracy: 0.8436, F1_w: 0.8287, F1_m: 0.7057
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 38, np.int64(1): 15})
+Epoch 285 Validation - Acc: 0.7547, F1_w: 0.6974, F1_m: 0.5318
+Confusion Matrix:
+ [[27  0  0]
+ [ 6 13  0]
+ [ 5  2  0]]
+当前epoch 285 < 最小训练周期 300，继续训练...
+Epoch 286 Training - Loss: 0.4248, Accuracy: 0.8341, F1_w: 0.8120, F1_m: 0.6609
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 32, np.int64(1): 21})
+Epoch 286 Validation - Acc: 0.7925, F1_w: 0.7364, F1_m: 0.5658
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 5  2  0]]
+当前epoch 286 < 最小训练周期 300，继续训练...
+Epoch 287 Training - Loss: 0.4379, Accuracy: 0.8483, F1_w: 0.8216, F1_m: 0.6838
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 32, np.int64(1): 21})
+Epoch 287 Validation - Acc: 0.7925, F1_w: 0.7364, F1_m: 0.5658
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 5  2  0]]
+当前epoch 287 < 最小训练周期 300，继续训练...
+Epoch 288 Training - Loss: 0.4016, Accuracy: 0.8436, F1_w: 0.8248, F1_m: 0.6946
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 33, np.int64(1): 20})
+Epoch 288 Validation - Acc: 0.8113, F1_w: 0.7540, F1_m: 0.5795
+Confusion Matrix:
+ [[26  1  0]
+ [ 2 17  0]
+ [ 5  2  0]]
+当前epoch 288 < 最小训练周期 300，继续训练...
+Epoch 289 Training - Loss: 0.3995, Accuracy: 0.8341, F1_w: 0.8261, F1_m: 0.7076
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 33, np.int64(1): 20})
+Epoch 289 Validation - Acc: 0.8113, F1_w: 0.7540, F1_m: 0.5795
+Confusion Matrix:
+ [[26  1  0]
+ [ 2 17  0]
+ [ 5  2  0]]
+当前epoch 289 < 最小训练周期 300，继续训练...
+Epoch 290 Training - Loss: 0.3665, Accuracy: 0.8531, F1_w: 0.8465, F1_m: 0.7429
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 35, np.int64(1): 18})
+Epoch 290 Validation - Acc: 0.8113, F1_w: 0.7537, F1_m: 0.5786
+Confusion Matrix:
+ [[27  0  0]
+ [ 3 16  0]
+ [ 5  2  0]]
+当前epoch 290 < 最小训练周期 300，继续训练...
+Epoch 291 Training - Loss: 0.3822, Accuracy: 0.8199, F1_w: 0.8232, F1_m: 0.7213
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 34, np.int64(1): 18, np.int64(2): 1})
+Epoch 291 Validation - Acc: 0.8302, F1_w: 0.7940, F1_m: 0.6667
+Confusion Matrix:
+ [[27  0  0]
+ [ 3 16  0]
+ [ 4  2  1]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.7940.pth, 指标: 0.7940
+当前epoch 291 < 最小训练周期 300，继续训练...
+Epoch 292 Training - Loss: 0.4358, Accuracy: 0.8199, F1_w: 0.8260, F1_m: 0.7193
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 32, np.int64(1): 21})
+Epoch 292 Validation - Acc: 0.8113, F1_w: 0.7537, F1_m: 0.5771
+Confusion Matrix:
+ [[26  1  0]
+ [ 2 17  0]
+ [ 4  3  0]]
+当前epoch 292 < 最小训练周期 300，继续训练...
+Epoch 293 Training - Loss: 0.3480, Accuracy: 0.8626, F1_w: 0.8568, F1_m: 0.7589
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 27, np.int64(1): 26})
+Epoch 293 Validation - Acc: 0.7170, F1_w: 0.6671, F1_m: 0.5111
+Confusion Matrix:
+ [[21  6  0]
+ [ 2 17  0]
+ [ 4  3  0]]
+当前epoch 293 < 最小训练周期 300，继续训练...
+Epoch 294 Training - Loss: 0.5076, Accuracy: 0.8294, F1_w: 0.8284, F1_m: 0.7433
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 33, np.int64(1): 20})
+Epoch 294 Validation - Acc: 0.7925, F1_w: 0.7357, F1_m: 0.5624
+Confusion Matrix:
+ [[26  1  0]
+ [ 3 16  0]
+ [ 4  3  0]]
+当前epoch 294 < 最小训练周期 300，继续训练...
+Epoch 295 Training - Loss: 0.3889, Accuracy: 0.8626, F1_w: 0.8577, F1_m: 0.7690
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 35, np.int64(1): 18})
+Epoch 295 Validation - Acc: 0.7547, F1_w: 0.6986, F1_m: 0.5318
+Confusion Matrix:
+ [[26  1  0]
+ [ 5 14  0]
+ [ 4  3  0]]
+当前epoch 295 < 最小训练周期 300，继续训练...
+Epoch 296 Training - Loss: 0.4241, Accuracy: 0.8389, F1_w: 0.8323, F1_m: 0.7232
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 34, np.int64(1): 18, np.int64(2): 1})
+Epoch 296 Validation - Acc: 0.7547, F1_w: 0.7056, F1_m: 0.5364
+Confusion Matrix:
+ [[26  1  0]
+ [ 4 14  1]
+ [ 4  3  0]]
+当前epoch 296 < 最小训练周期 300，继续训练...
+Epoch 297 Training - Loss: 0.4909, Accuracy: 0.8057, F1_w: 0.7872, F1_m: 0.6393
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 34, np.int64(1): 19})
+Epoch 297 Validation - Acc: 0.7736, F1_w: 0.7173, F1_m: 0.5473
+Confusion Matrix:
+ [[26  1  0]
+ [ 4 15  0]
+ [ 4  3  0]]
+当前epoch 297 < 最小训练周期 300，继续训练...
+Epoch 298 Training - Loss: 0.4485, Accuracy: 0.8389, F1_w: 0.8252, F1_m: 0.6901
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 40, np.int64(1): 13})
+Epoch 298 Validation - Acc: 0.7170, F1_w: 0.6571, F1_m: 0.4978
+Confusion Matrix:
+ [[27  0  0]
+ [ 8 11  0]
+ [ 5  2  0]]
+当前epoch 298 < 最小训练周期 300，继续训练...
+Epoch 299 Training - Loss: 0.4548, Accuracy: 0.8341, F1_w: 0.8233, F1_m: 0.7092
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 35, np.int64(1): 18})
+Epoch 299 Validation - Acc: 0.7547, F1_w: 0.6986, F1_m: 0.5318
+Confusion Matrix:
+ [[26  1  0]
+ [ 5 14  0]
+ [ 4  3  0]]
+当前epoch 299 < 最小训练周期 300，继续训练...
+Epoch 300 Training - Loss: 0.4007, Accuracy: 0.8531, F1_w: 0.8391, F1_m: 0.7119
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 30, np.int64(1): 23})
+Epoch 300 Validation - Acc: 0.7736, F1_w: 0.7192, F1_m: 0.5505
+Confusion Matrix:
+ [[24  3  0]
+ [ 2 17  0]
+ [ 4  3  0]]
+Saving model with metric: 0.7192
+Epoch 301 Training - Loss: 0.3220, Accuracy: 0.8910, F1_w: 0.8787, F1_m: 0.7885
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 30, np.int64(1): 23})
+Epoch 301 Validation - Acc: 0.7736, F1_w: 0.7192, F1_m: 0.5505
+Confusion Matrix:
+ [[24  3  0]
+ [ 2 17  0]
+ [ 4  3  0]]
+Saving model with metric: 0.7192
+Epoch 302 Training - Loss: 0.3950, Accuracy: 0.8578, F1_w: 0.8428, F1_m: 0.7168
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 31, np.int64(1): 22})
+Epoch 302 Validation - Acc: 0.7925, F1_w: 0.7365, F1_m: 0.5638
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 4  3  0]]
+Saving model with metric: 0.7365
+Epoch 303 Training - Loss: 0.3795, Accuracy: 0.8341, F1_w: 0.8247, F1_m: 0.6965
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 32, np.int64(1): 21})
+Epoch 303 Validation - Acc: 0.8113, F1_w: 0.7537, F1_m: 0.5771
+Confusion Matrix:
+ [[26  1  0]
+ [ 2 17  0]
+ [ 4  3  0]]
+Saving model with metric: 0.7537
+Epoch 304 Training - Loss: 0.2820, Accuracy: 0.8910, F1_w: 0.8812, F1_m: 0.7894
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 30, np.int64(1): 23})
+Epoch 304 Validation - Acc: 0.7736, F1_w: 0.7192, F1_m: 0.5505
+Confusion Matrix:
+ [[24  3  0]
+ [ 2 17  0]
+ [ 4  3  0]]
+EarlyStopping counter: 1 out of 10
+Epoch 305 Training - Loss: 0.3790, Accuracy: 0.8626, F1_w: 0.8511, F1_m: 0.7410
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 30, np.int64(1): 23})
+Epoch 305 Validation - Acc: 0.7736, F1_w: 0.7192, F1_m: 0.5505
+Confusion Matrix:
+ [[24  3  0]
+ [ 2 17  0]
+ [ 4  3  0]]
+EarlyStopping counter: 2 out of 10
+Epoch 306 Training - Loss: 0.3849, Accuracy: 0.8720, F1_w: 0.8432, F1_m: 0.7013
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 37, np.int64(1): 16})
+Epoch 306 Validation - Acc: 0.7736, F1_w: 0.7166, F1_m: 0.5479
+Confusion Matrix:
+ [[27  0  0]
+ [ 5 14  0]
+ [ 5  2  0]]
+EarlyStopping counter: 3 out of 10
+Epoch 307 Training - Loss: 0.4157, Accuracy: 0.8483, F1_w: 0.8371, F1_m: 0.7316
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 38, np.int64(1): 15})
+Epoch 307 Validation - Acc: 0.7547, F1_w: 0.6974, F1_m: 0.5318
+Confusion Matrix:
+ [[27  0  0]
+ [ 6 13  0]
+ [ 5  2  0]]
+EarlyStopping counter: 4 out of 10
+Epoch 308 Training - Loss: 0.4078, Accuracy: 0.8626, F1_w: 0.8560, F1_m: 0.7725
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 33, np.int64(1): 20})
+Epoch 308 Validation - Acc: 0.7736, F1_w: 0.7187, F1_m: 0.5513
+Confusion Matrix:
+ [[25  2  0]
+ [ 3 16  0]
+ [ 5  2  0]]
+EarlyStopping counter: 5 out of 10
+Epoch 309 Training - Loss: 0.3271, Accuracy: 0.9005, F1_w: 0.8884, F1_m: 0.7996
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 33, np.int64(1): 20})
+Epoch 309 Validation - Acc: 0.7736, F1_w: 0.7187, F1_m: 0.5513
+Confusion Matrix:
+ [[25  2  0]
+ [ 3 16  0]
+ [ 5  2  0]]
+EarlyStopping counter: 6 out of 10
+Epoch 310 Training - Loss: 0.3806, Accuracy: 0.8389, F1_w: 0.8276, F1_m: 0.7018
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 31, np.int64(1): 22})
+Epoch 310 Validation - Acc: 0.7736, F1_w: 0.7189, F1_m: 0.5523
+Confusion Matrix:
+ [[24  3  0]
+ [ 2 17  0]
+ [ 5  2  0]]
+EarlyStopping counter: 7 out of 10
+Epoch 311 Training - Loss: 0.2988, Accuracy: 0.8957, F1_w: 0.8864, F1_m: 0.8043
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 29, np.int64(1): 22, np.int64(2): 2})
+Epoch 311 Validation - Acc: 0.8113, F1_w: 0.7926, F1_m: 0.7103
+Confusion Matrix:
+ [[24  3  0]
+ [ 2 17  0]
+ [ 3  2  2]]
+Saving model with metric: 0.7926
+Epoch 312 Training - Loss: 0.3844, Accuracy: 0.8578, F1_w: 0.8508, F1_m: 0.7469
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 32, np.int64(1): 21})
+Epoch 312 Validation - Acc: 0.7925, F1_w: 0.7364, F1_m: 0.5658
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 5  2  0]]
+EarlyStopping counter: 1 out of 10
+Epoch 313 Training - Loss: 0.3077, Accuracy: 0.8815, F1_w: 0.8726, F1_m: 0.7798
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 31, np.int64(1): 21, np.int64(2): 1})
+Epoch 313 Validation - Acc: 0.8113, F1_w: 0.7769, F1_m: 0.6540
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 4  2  1]]
+EarlyStopping counter: 2 out of 10
+Epoch 314 Training - Loss: 0.3961, Accuracy: 0.8483, F1_w: 0.8375, F1_m: 0.7191
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 31, np.int64(1): 21, np.int64(2): 1})
+Epoch 314 Validation - Acc: 0.8113, F1_w: 0.7769, F1_m: 0.6540
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 4  2  1]]
+EarlyStopping counter: 3 out of 10
+Epoch 315 Training - Loss: 0.3142, Accuracy: 0.8720, F1_w: 0.8479, F1_m: 0.7157
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 31, np.int64(1): 21, np.int64(2): 1})
+Epoch 315 Validation - Acc: 0.8113, F1_w: 0.7769, F1_m: 0.6540
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 4  2  1]]
+EarlyStopping counter: 4 out of 10
+Epoch 316 Training - Loss: 0.3405, Accuracy: 0.8720, F1_w: 0.8621, F1_m: 0.7599
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 32, np.int64(1): 20, np.int64(2): 1})
+Epoch 316 Validation - Acc: 0.7925, F1_w: 0.7589, F1_m: 0.6393
+Confusion Matrix:
+ [[25  2  0]
+ [ 3 16  0]
+ [ 4  2  1]]
+EarlyStopping counter: 5 out of 10
+Epoch 317 Training - Loss: 0.3669, Accuracy: 0.8483, F1_w: 0.8421, F1_m: 0.7254
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 31, np.int64(1): 20, np.int64(2): 2})
+Epoch 317 Validation - Acc: 0.8113, F1_w: 0.7920, F1_m: 0.7090
+Confusion Matrix:
+ [[25  2  0]
+ [ 3 16  0]
+ [ 3  2  2]]
+EarlyStopping counter: 6 out of 10
+Epoch 318 Training - Loss: 0.3289, Accuracy: 0.8957, F1_w: 0.8847, F1_m: 0.7947
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 30, np.int64(1): 21, np.int64(2): 2})
+Epoch 318 Validation - Acc: 0.8302, F1_w: 0.8103, F1_m: 0.7239
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 3  2  2]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.8103.pth, 指标: 0.8103
+Saving model with metric: 0.8103
+Epoch 319 Training - Loss: 0.3058, Accuracy: 0.9005, F1_w: 0.8998, F1_m: 0.8380
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 29, np.int64(1): 21, np.int64(2): 3})
+Epoch 319 Validation - Acc: 0.8491, F1_w: 0.8388, F1_m: 0.7810
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 2  2  3]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.8388.pth, 指标: 0.8388
+Saving model with metric: 0.8388
+Epoch 320 Training - Loss: 0.2743, Accuracy: 0.9336, F1_w: 0.9313, F1_m: 0.8840
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 29, np.int64(1): 21, np.int64(2): 3})
+Epoch 320 Validation - Acc: 0.8491, F1_w: 0.8388, F1_m: 0.7810
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 2  2  3]]
+Saving model with metric: 0.8388
+Epoch 321 Training - Loss: 0.2418, Accuracy: 0.9289, F1_w: 0.9268, F1_m: 0.8766
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 29, np.int64(1): 21, np.int64(2): 3})
+Epoch 321 Validation - Acc: 0.8491, F1_w: 0.8388, F1_m: 0.7810
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 2  2  3]]
+Saving model with metric: 0.8388
+Epoch 322 Training - Loss: 0.3010, Accuracy: 0.8768, F1_w: 0.8655, F1_m: 0.7647
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 28, np.int64(1): 22, np.int64(2): 3})
+Epoch 322 Validation - Acc: 0.8302, F1_w: 0.8211, F1_m: 0.7673
+Confusion Matrix:
+ [[24  3  0]
+ [ 2 17  0]
+ [ 2  2  3]]
+EarlyStopping counter: 1 out of 10
+Epoch 323 Training - Loss: 0.2883, Accuracy: 0.9242, F1_w: 0.9235, F1_m: 0.8739
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 26, np.int64(1): 23, np.int64(2): 4})
+Epoch 323 Validation - Acc: 0.8113, F1_w: 0.8044, F1_m: 0.7410
+Confusion Matrix:
+ [[23  4  0]
+ [ 1 17  1]
+ [ 2  2  3]]
+EarlyStopping counter: 2 out of 10
+Epoch 324 Training - Loss: 0.3077, Accuracy: 0.8768, F1_w: 0.8751, F1_m: 0.8029
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 28, np.int64(1): 22, np.int64(2): 3})
+Epoch 324 Validation - Acc: 0.8302, F1_w: 0.8211, F1_m: 0.7673
+Confusion Matrix:
+ [[24  3  0]
+ [ 2 17  0]
+ [ 2  2  3]]
+EarlyStopping counter: 3 out of 10
+Epoch 325 Training - Loss: 0.3055, Accuracy: 0.8768, F1_w: 0.8687, F1_m: 0.7843
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 28, np.int64(1): 21, np.int64(2): 4})
+Epoch 325 Validation - Acc: 0.8491, F1_w: 0.8454, F1_m: 0.8167
+Confusion Matrix:
+ [[24  3  0]
+ [ 2 17  0]
+ [ 2  1  4]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.8454.pth, 指标: 0.8454
+Saving model with metric: 0.8454
+Epoch 326 Training - Loss: 0.2484, Accuracy: 0.9289, F1_w: 0.9275, F1_m: 0.8876
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 25, np.int64(1): 24, np.int64(2): 4})
+Epoch 326 Validation - Acc: 0.8302, F1_w: 0.8272, F1_m: 0.8035
+Confusion Matrix:
+ [[22  5  0]
+ [ 1 18  0]
+ [ 2  1  4]]
+EarlyStopping counter: 1 out of 10
+Epoch 327 Training - Loss: 0.2910, Accuracy: 0.8815, F1_w: 0.8854, F1_m: 0.8131
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 25, np.int64(1): 24, np.int64(2): 4})
+Epoch 327 Validation - Acc: 0.8302, F1_w: 0.8272, F1_m: 0.8035
+Confusion Matrix:
+ [[22  5  0]
+ [ 1 18  0]
+ [ 2  1  4]]
+EarlyStopping counter: 2 out of 10
+Epoch 328 Training - Loss: 0.2777, Accuracy: 0.9005, F1_w: 0.8996, F1_m: 0.8385
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 25, np.int64(1): 24, np.int64(2): 4})
+Epoch 328 Validation - Acc: 0.8302, F1_w: 0.8272, F1_m: 0.8035
+Confusion Matrix:
+ [[22  5  0]
+ [ 1 18  0]
+ [ 2  1  4]]
+EarlyStopping counter: 3 out of 10
+Epoch 329 Training - Loss: 0.4047, Accuracy: 0.8815, F1_w: 0.8749, F1_m: 0.8107
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 29, np.int64(1): 20, np.int64(2): 4})
+Epoch 329 Validation - Acc: 0.8679, F1_w: 0.8634, F1_m: 0.8306
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 2  1  4]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.8634.pth, 指标: 0.8634
+Saving model with metric: 0.8634
+Epoch 330 Training - Loss: 0.3991, Accuracy: 0.8578, F1_w: 0.8415, F1_m: 0.7318
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 35, np.int64(1): 14, np.int64(2): 4})
+Epoch 330 Validation - Acc: 0.8491, F1_w: 0.8439, F1_m: 0.8156
+Confusion Matrix:
+ [[27  0  0]
+ [ 5 14  0]
+ [ 3  0  4]]
+EarlyStopping counter: 1 out of 10
+Epoch 331 Training - Loss: 0.1930, Accuracy: 0.9336, F1_w: 0.9309, F1_m: 0.8871
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(1): 28, np.int64(0): 21, np.int64(2): 4})
+Epoch 331 Validation - Acc: 0.7170, F1_w: 0.7107, F1_m: 0.6262
+Confusion Matrix:
+ [[19  7  1]
+ [ 1 17  1]
+ [ 1  4  2]]
+EarlyStopping counter: 2 out of 10
+Epoch 332 Training - Loss: 0.2796, Accuracy: 0.9005, F1_w: 0.8944, F1_m: 0.8190
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 30, np.int64(1): 19, np.int64(2): 4})
+Epoch 332 Validation - Acc: 0.8491, F1_w: 0.8387, F1_m: 0.7666
+Confusion Matrix:
+ [[26  1  0]
+ [ 2 16  1]
+ [ 2  2  3]]
+EarlyStopping counter: 3 out of 10
+Epoch 333 Training - Loss: 0.2884, Accuracy: 0.9005, F1_w: 0.8981, F1_m: 0.8362
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 34, np.int64(1): 16, np.int64(2): 3})
+Epoch 333 Validation - Acc: 0.8491, F1_w: 0.8375, F1_m: 0.7808
+Confusion Matrix:
+ [[27  0  0]
+ [ 4 15  0]
+ [ 3  1  3]]
+EarlyStopping counter: 4 out of 10
+Epoch 334 Training - Loss: 0.2568, Accuracy: 0.9242, F1_w: 0.9141, F1_m: 0.8449
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 34, np.int64(1): 17, np.int64(2): 2})
+Epoch 334 Validation - Acc: 0.8302, F1_w: 0.8084, F1_m: 0.7210
+Confusion Matrix:
+ [[27  0  0]
+ [ 4 15  0]
+ [ 3  2  2]]
+EarlyStopping counter: 5 out of 10
+Epoch 335 Training - Loss: 0.2820, Accuracy: 0.9100, F1_w: 0.9041, F1_m: 0.8282
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 34, np.int64(1): 16, np.int64(2): 3})
+Epoch 335 Validation - Acc: 0.8491, F1_w: 0.8375, F1_m: 0.7808
+Confusion Matrix:
+ [[27  0  0]
+ [ 4 15  0]
+ [ 3  1  3]]
+EarlyStopping counter: 6 out of 10
+Epoch 336 Training - Loss: 0.2455, Accuracy: 0.9242, F1_w: 0.9209, F1_m: 0.8702
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 32, np.int64(1): 16, np.int64(2): 5})
+Epoch 336 Validation - Acc: 0.8679, F1_w: 0.8663, F1_m: 0.8573
+Confusion Matrix:
+ [[26  1  0]
+ [ 4 15  0]
+ [ 2  0  5]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.8663.pth, 指标: 0.8663
+Saving model with metric: 0.8663
+Epoch 337 Training - Loss: 0.2774, Accuracy: 0.8957, F1_w: 0.8899, F1_m: 0.8178
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 29, np.int64(1): 20, np.int64(2): 4})
+Epoch 337 Validation - Acc: 0.8679, F1_w: 0.8634, F1_m: 0.8306
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 2  1  4]]
+EarlyStopping counter: 1 out of 10
+Epoch 338 Training - Loss: 0.2523, Accuracy: 0.9194, F1_w: 0.9165, F1_m: 0.8623
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 29, np.int64(1): 21, np.int64(2): 3})
+Epoch 338 Validation - Acc: 0.8491, F1_w: 0.8388, F1_m: 0.7810
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 2  2  3]]
+EarlyStopping counter: 2 out of 10
+Epoch 339 Training - Loss: 0.2554, Accuracy: 0.9431, F1_w: 0.9417, F1_m: 0.9040
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 29, np.int64(1): 21, np.int64(2): 3})
+Epoch 339 Validation - Acc: 0.8491, F1_w: 0.8388, F1_m: 0.7810
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 2  2  3]]
+EarlyStopping counter: 3 out of 10
+Epoch 340 Training - Loss: 0.2639, Accuracy: 0.9242, F1_w: 0.9191, F1_m: 0.8637
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 29, np.int64(1): 19, np.int64(2): 5})
+Epoch 340 Validation - Acc: 0.8868, F1_w: 0.8857, F1_m: 0.8736
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 2  0  5]]
+保存最佳模型到: ./kfold_checkpoints/3-5s-wav2vec+mfccs-densenet+openface-user_lstm/best_model_f1_0.8857.pth, 指标: 0.8857
+Saving model with metric: 0.8857
+Epoch 341 Training - Loss: 0.2292, Accuracy: 0.9336, F1_w: 0.9268, F1_m: 0.8745
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 29, np.int64(1): 19, np.int64(2): 5})
+Epoch 341 Validation - Acc: 0.8868, F1_w: 0.8857, F1_m: 0.8736
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 2  0  5]]
+Saving model with metric: 0.8857
+Epoch 342 Training - Loss: 0.2176, Accuracy: 0.9384, F1_w: 0.9352, F1_m: 0.8899
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 29, np.int64(1): 20, np.int64(2): 4})
+Epoch 342 Validation - Acc: 0.8679, F1_w: 0.8634, F1_m: 0.8306
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 2  1  4]]
+EarlyStopping counter: 1 out of 10
+Epoch 343 Training - Loss: 0.1995, Accuracy: 0.9336, F1_w: 0.9322, F1_m: 0.8874
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 29, np.int64(1): 21, np.int64(2): 3})
+Epoch 343 Validation - Acc: 0.8491, F1_w: 0.8388, F1_m: 0.7810
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 2  2  3]]
+EarlyStopping counter: 2 out of 10
+Epoch 344 Training - Loss: 0.2063, Accuracy: 0.9242, F1_w: 0.9206, F1_m: 0.8688
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 29, np.int64(1): 21, np.int64(2): 3})
+Epoch 344 Validation - Acc: 0.8491, F1_w: 0.8388, F1_m: 0.7810
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 2  2  3]]
+EarlyStopping counter: 3 out of 10
+Epoch 345 Training - Loss: 0.2242, Accuracy: 0.9194, F1_w: 0.9162, F1_m: 0.8616
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 30, np.int64(1): 20, np.int64(2): 3})
+Epoch 345 Validation - Acc: 0.8302, F1_w: 0.8203, F1_m: 0.7659
+Confusion Matrix:
+ [[25  2  0]
+ [ 3 16  0]
+ [ 2  2  3]]
+EarlyStopping counter: 4 out of 10
+Epoch 346 Training - Loss: 0.2181, Accuracy: 0.9573, F1_w: 0.9560, F1_m: 0.9318
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 29, np.int64(1): 21, np.int64(2): 3})
+Epoch 346 Validation - Acc: 0.8491, F1_w: 0.8388, F1_m: 0.7810
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 2  2  3]]
+EarlyStopping counter: 5 out of 10
+Epoch 347 Training - Loss: 0.2200, Accuracy: 0.9336, F1_w: 0.9293, F1_m: 0.8831
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 29, np.int64(1): 21, np.int64(2): 3})
+Epoch 347 Validation - Acc: 0.8491, F1_w: 0.8388, F1_m: 0.7810
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 2  2  3]]
+EarlyStopping counter: 6 out of 10
+Epoch 348 Training - Loss: 0.1673, Accuracy: 0.9431, F1_w: 0.9418, F1_m: 0.9175
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 29, np.int64(1): 21, np.int64(2): 3})
+Epoch 348 Validation - Acc: 0.8491, F1_w: 0.8388, F1_m: 0.7810
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 2  2  3]]
+EarlyStopping counter: 7 out of 10
+Epoch 349 Training - Loss: 0.1965, Accuracy: 0.9526, F1_w: 0.9499, F1_m: 0.9099
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 30, np.int64(1): 18, np.int64(2): 5})
+Epoch 349 Validation - Acc: 0.8679, F1_w: 0.8670, F1_m: 0.8585
+Confusion Matrix:
+ [[25  2  0]
+ [ 3 16  0]
+ [ 2  0  5]]
+EarlyStopping counter: 8 out of 10
+Epoch 350 Training - Loss: 0.1989, Accuracy: 0.9336, F1_w: 0.9317, F1_m: 0.8904
+验证标签分布: Counter({np.int64(0): 27, np.int64(1): 19, np.int64(2): 7})
+验证预测分布: Counter({np.int64(0): 29, np.int64(1): 19, np.int64(2): 5})
+Epoch 350 Validation - Acc: 0.8868, F1_w: 0.8857, F1_m: 0.8736
+Confusion Matrix:
+ [[25  2  0]
+ [ 2 17  0]
+ [ 2  0  5]]
+Saving model with metric: 0.8857
+
+====== 训练结束 ======
+性能指标: Acc=0.8868, F1_weighted=0.8857, F1_macro=0.8736
